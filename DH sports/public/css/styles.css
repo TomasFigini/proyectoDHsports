@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 .nav-bar{
     background-color:#8EA8BF ;
@@ -18,8 +19,50 @@
     border-color: grey;
     color: grey;
     border-radius: 3%;
+} 
+
+.banner{
+
 }
 
 body{
-    background-color: #59394E;
+    background-color: #262626;
+}
+
+.titulo{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color: whitesmoke;
+}
+
+.ver-todo{
+    margin-bottom: 20px;
+    margin-left: 3px;    
+}
+
+.articulos{
+    display: flex;
+    justify-content: center;
+}
+.contenedor-art{
+    background-color: #BFBFBF;
+    padding: 10px;
+    border-radius: 2%;
+}
+
+.descrip-art{
+    display: flex;
+}
+
+.nombre-art{
+    font-weight: bold;
+    margin-bottom: 5px
+}
+
+.precio{
+    color: ;
+}
+.descuento{
+    color: green;
+    margin-left: 15px;
 }

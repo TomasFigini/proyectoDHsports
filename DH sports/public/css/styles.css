@@ -22,7 +22,21 @@
 } 
 
 .banner{
+    margin-bottom: 20px;
+}
 
+.categorias{
+    display: flex;
+    color: #E3E3E3;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.fa-solid.fa-border{
+    border: 2px solid #D9D9D9;
+    border-radius: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 body{
@@ -31,7 +45,6 @@ body{
 
 .titulo{
     margin-bottom: 10px;
-    margin-top: 20px;
     color: whitesmoke;
 }
 
@@ -43,15 +56,18 @@ body{
 .articulos{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .contenedor-art{
     background-color: #BFBFBF;
     padding: 10px;
     border-radius: 2%;
+    margin-bottom: 20px;
 }
 
 .descrip-art{
     display: flex;
+    position: relative;
 }
 
 .nombre-art{
@@ -65,4 +81,32 @@ body{
 .descuento{
     color: green;
     margin-left: 15px;
+}
+
+.fa-solid.fa-heart{
+    position: absolute;
+    left: 85%;
+    top: 29%;
+}
+
+
+.footer{
+    padding-top: 10px;
+    background-color: #335AA6;
+}
+
+.contacto{
+    background-color: #595959;
+    margin-bottom: 10px;
+    color: #E3E3E3;
+}
+
+.horario{
+    text-align: center;
+}
+
+.redes{
+    display: flex;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }

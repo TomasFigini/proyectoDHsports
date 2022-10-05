@@ -19,6 +19,7 @@
     border-color: grey;
     color: grey;
     border-radius: 3%;
+    height: 30px;
 } 
 
 .banner{
@@ -75,18 +76,10 @@ body{
     margin-bottom: 5px
 }
 
-.precio{
-    color: ;
-}
-.descuento{
-    color: green;
-    margin-left: 15px;
-}
-
-.fa-solid.fa-heart{
+.fa-regular.fa-heart{
     position: absolute;
     left: 85%;
-    top: 29%;
+    bottom: 1634%;
 }
 
 
@@ -109,4 +102,102 @@ body{
     display: flex;
     margin-top: 10%;
     margin-bottom: 10%;
+}
+
+.logo{
+    display: none;
+}
+
+@media (max-width:540px){
+    
+    .iconos .fa-heart{
+    display: none;
+    }
+
+    .iconos .fa-user-large{
+    display: none;
+    }
+
+    .barra-cat{
+        display: none;
+    }
+}
+
+@media(max-width: 1119px){
+    
+    .iconos .fa-heart{
+    display: none;
+    }
+
+    .iconos .fa-user-large{
+    display: none;
+    }
+
+    .contenedor-art{
+        margin-left: 10px;
+    }
+
+    .barra-cat{
+        display: none;
+    }
+
+}
+
+@media(min-width: 1120px){
+
+    .categorias{
+        display: none;
+    }
+
+    .burguer{
+        display: none;
+    }
+
+    .contenedor-art .fa-heart{
+        display: none;
+    }
+
+    .contenedor-art:hover .fa-heart{
+        display: block;
+    }
+
+    .search-bar{
+        margin-top: 30px;
+    }
+
+    .banner{
+        height: 250px;
+    }
+
+    .nav-bar{
+        justify-content: space-around;
+    }
+
+    .logo{
+        display: block;
+    }
+
+    .iconos{
+        margin-top: 35px;
+    }
+
+    .contenedor-art{
+        margin-left: 10px;
+    }
+
+    .barra-cat{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    background-color: #8EA8BF;
+    padding-bottom: 10px;
+    }
+
+    li{
+        margin-right: 30px;
+    }
+
+    .fa-solid{
+        margin-left: 15px;
+    }
 }

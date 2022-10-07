@@ -11,19 +11,20 @@ main {
 }
 
 .card-item {
+    background-color: whitesmoke;
     width: 96%;
     margin: auto;
     border: solid 1px whitesmoke;
-    border-radius: 2%;
+    border-radius: 3px;
     padding: 2%;
-    color: whitesmoke;
+    color: #262626;
     font-size: 16px;
     margin-bottom: 5px;
 }
 
-.item-name {
+/*.item-name {
     color: whitesmoke;
-}
+}*/
 
 .item-header {
     display: flex;
@@ -41,6 +42,11 @@ main {
     height: 100px;
 }
 
+.item-img {
+    border: solid 1px #8EA8BF;
+    border-radius: 3px;
+}
+
 .product-img {
     display: flex;
     justify-content: left;
@@ -53,6 +59,8 @@ main {
 
 .product-detail {
     font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .product-info-container {
@@ -118,3 +126,28 @@ main {
     margin-left: 10px;
 }
 
+button, .input-button {
+    padding: 2px;
+    background-color: whitesmoke;
+    border: solid whitesmoke 1px;
+    border-radius: 3px;
+    width: 80px;
+}
+
+.input-text {
+    padding: 2px;
+    background-color: whitesmoke;
+    border: solid whitesmoke 1px;
+    border-radius: 3px;
+}
+
+
+
+
+@media (min-width: 460px){
+
+}
+
+@media (min-width: 768px) {
+
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles-productDetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Detalle de producto</title>
+</head>
+<body>
+    <header class="main-header">
+        <section class="header-container">
+            <nav class="nav-bar">
+                <div class="top-logo">
+                    <img width='60px'src="images/Logo-DHSports.jpeg" alt="Logo DHSports">
+                </div>
+                <div class="form" action="#" method="GET">
+                    <div class="input">Buscar productos, marcas y más</div>
+                    <div class="submit"><a href=""><i class="lupa fa fa-search"></i></a></div>
+                </div>
+                <div class="burger-menu">
+                    <i class="burger fa fa-bars burger fa-2x"></i>
+                </div>
+                <div class="nav-bar-icons">
+                    <a href="/register"><i class="fa-solid fa-user fa-xl"></i></a>
+                    <a href="/productCart"><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
+                    <a href="/favoritos"><i class="fa-solid fa-heart fa-xl"></i></a>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <header>
+            <div class="ruta-producto">
+                <ul>
+                    <li><a href="/index.html"><i>Inicio ></i></a></li>
+                    <li><a href="#"><i>Hombre ></i></a></li>
+                    <li><a href="#"><i>Indumentaria</i></a></li>
+                </ul>
+            </div>
+        </header>
+        <section class="articulo">
+                    <div class="container">
+                        <ul class="slider">
+                            <li id="slide1"><img width='250px' src="images/Camiseta-Argentina.png" alt="Camiseta seleccion Argentina"></li>
+                            <li id="slide2"><img width='250px' src="images/camiseta-Arg-Back.jpg" alt="Camiseta seleccion p/ atras"></li>
+                            <li id="slide3"><img width='250px' src="images/camiseta-argentina-messi.jpg" alt="Camiseta seleccion messi"></li>
+                            <li id="slide4"><img width='250px' src="images/camiseta-argentina-equipo.jpg" alt="Camiseta seleccion equipo"></li>
+                        </ul>
+                        <ul class="menu-slider">
+                            <li>
+                                <a href="#slide1"><i class="fa-solid fa-circle-dot"></i></a>
+                            </li>
+                            <li>
+                                <a href="#slide2"><i class="fa-solid fa-circle-dot"></i></a>
+                            </li>
+                            <li>
+                                <a href="#slide3"><i class="fa-solid fa-circle-dot"></i></a>
+                            </li>
+                            <li>
+                                <a href="#slide4"><i class="fa-solid fa-circle-dot"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-title">
+                    <h1 class="title"><b>Camiseta Titular Argentina</b></h1>
+                    </div>
+                <div id="price-tag">
+                    <span>  $17.000  </span>
+                </div>
+               <div>
+                    <button type='submit'class="fav-button">
+                        <a href="/favoritos"><i class="fa-solid fa-heart fa-2xl"></i></a>
+                    </button>
+                </div>
+                    <details class="tabla-talles">
+                        <summary><b>Tabla de talles</b></summary>
+                        <form action="#" method="post">
+                            <label for="talle">XS<input type="radio" name="talle" value="XS"></label>
+                            <label for="talle">S<input type="radio" name="talle" value="S"></label>
+                            <label for="talle">M<input type="radio" name="talle" value="M"></label>
+                            <label for="talle">L<input type="radio" name="talle" value="L"></label>
+                            <label for="talle">XL<input type="radio" name="talle" value="XL"></label>
+                        </form>
+                    </details>
+                        <button type="submit" class="añadir-button">
+                            <b><em>Añadir al carrito</em></b>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <p class="sku">Item No. HB9217</p>
+                    <section class="description-container">
+                            <details class="descripcion">
+                                <summary><b>Descripcion</b></summary>
+                                <h2>La nueva camiseta de Argentina para los hinchas de la selección, hecha con material reciclado</h2>
+                                <p>
+                                    100% Argentina. Diseñada para los hinchas, ofrece comodidad en todo momento gracias a su tejido suave con tecnología de absorción AEROREADY. Los detalles en la parte interior trasera del cuello están inspirados en la bandera nacional que los jugadores representan con tanto orgullo.
+
+                                    Un producto hecho parcialmente con contenido reciclado generado a partir de desechos de producción, tales como recortes de tela, y desechos domésticos postconsumo, para evitar un mayor impacto ambiental al producir contenido virgen. 
+                                </p>
+                            </details>
+                            <details class="especificaciones">
+                                <summary><b>Especificaciones</b></summary>
+                                <div>
+                                    <h3>Instrucciones de Lavado</h3>
+                                    <ul>
+                                        <li>No usar blanqueador.</li>
+                                        <li>No utilizar secadora.</li>
+                                        <li>No lavar en seco.</li>
+                                        <li>Lavar a maquina en temperatura fria.</li>
+                                        <li>Planchar a temperatura baja.</li>
+                                    </ul>
+                                </div>
+                            </details>
+                            <details class="detalles">
+                                <summary><b>Detalles</b></summary>
+                                <ul>
+                                    <li>Corte ajustado</li>
+                                    <li>Cuello redondo</li>
+                                    <li>tejido de punto doble 100% poliester reciclado</li>
+                                    <li>Tecnologia de absorcion <b>AEROREADY</b></li>
+                                    <li>Paneles de malla en los costados</li>
+                                    <li>Puños acanalados</li>
+                                    <li>Dobladillo trasero alargado</li>
+                                    <li>Escudo bordado de la Seleccion Argentina</li>
+                                    <li>Color del articulo: White / Ligth Blue</li>
+                                    <li>Numero de articulo: HB9217</li>
+                                </ul>
+                            </details>
+                    </section>
+        </section>
+    </main>    
+        <footer class="contacto">
+            <div class="phone-number1">
+                <h4><i class="fa-solid fa-phone"></i><b>  0800-111-1234 DH</b></h4>
+            </div>
+            <div class="phone-number2">
+                <h4><i class="fa-regular fa-comment"></i><b> +54 911 1178235278</b></h4>
+            </div>
+            <div class="bottom">
+                <details class="atencion-cliente">
+                    <summary>
+                       <b>Horarios de atencion al cliente</b>
+                    </summary>
+                    <ul>
+                        <li><p>Lunes a viernes de 08:30hs a 18:30hs.</p></li>
+                        <li><p>Sabados de 09hs a 17.30hs</p></li>
+                       </ul>
+                </details>
+                <details class="aboutus">
+                    <summary>
+                        <b>Sobre Nosotros</b>
+                    </summary>
+                    <article>
+                        Somos una empresa ficticia creada a partir de un grupo de estudiantes de DigitalHouse, nuestro proposito es crear una pagina con una interfaz grafica y experiencia
+                        agradable al usuario, dandole mucha importancia a la operabilidad y funcionalidad del proyecto.
+                    </article>
+                </details>
+                <details class="cuenta">
+                    <summary>
+                        <b>Cuenta</b>
+                    </summary>
+                    <ul>
+                        <li><a href="/register"><i class="fa-solid fa-users"></i><button>Registrarme</button></a></li>
+                        <li><a href="/login"><i class="fa-solid fa-user"></i><button>Iniciar sesion</button></a></li>
+                        <li><i class="fa-regular fa-file"></i><button><b>Terminos y condiciones {DH}</b></button></li>
+                    </ul>
+                </details>
+            </div>
+        </footer>
+</body>
+</html>

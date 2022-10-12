@@ -2,6 +2,11 @@ main {
     margin-bottom: 50px;
 }
 
+.main-body {
+    display: flex;
+    flex-direction: column;
+}
+
 .title {
     color: whitesmoke;
     width: 96%;
@@ -13,18 +18,14 @@ main {
 .card-item {
     background-color: whitesmoke;
     width: 96%;
-    margin: auto;
     border: solid 1px whitesmoke;
     border-radius: 3px;
     padding: 2%;
     color: #262626;
     font-size: 16px;
     margin-bottom: 5px;
+    max-width: 400px;
 }
-
-/*.item-name {
-    color: whitesmoke;
-}*/
 
 .item-header {
     display: flex;
@@ -70,7 +71,7 @@ main {
 
 .order-info {
     color: whitesmoke;
-    padding-left: 3%;
+    margin-left: 15px;
     display: flex;
     flex-direction: column;
 }
@@ -86,8 +87,16 @@ main {
     margin-left: 10px;
 }
 
+.order-articles {
+    margin-left: 15px;
+}
+
 .order-label {
     margin-bottom: 3px;
+}
+
+.order-summary {
+    max-width: 440px;
 }
 
 .order-summary-title {
@@ -145,9 +154,34 @@ button, .input-button {
 
 
 @media (min-width: 460px){
-
+    /*main {
+        display: flex;
+        flex-direction: column;
+        
+    }*/
+    .product-info-container {
+        flex-direction: row;
+        padding-top: 10px;
+    }
+    .product-amounts {
+        margin-left: 15px;
+    }
 }
 
 @media (min-width: 768px) {
-
+    .main-body {
+        display: flex;
+        flex-direction: row;
+    }
+    .order-articles {
+        flex-grow: 0.5;
+        max-width: 550px;
+    }
+    .order-info {
+        flex-grow: 0.5;
+        max-width: 550px;
+    }
+    .card-item {
+        max-width: 550px;
+    }
 }

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,35 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>enviando un archivo</title>
-    <link href="\login.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>  
 
-    <form action="resultado.html" method="POST"></form>
-    <p>
-    <label for="nombre"> Nombre: </label>
-    <input type="text" name="nombre" id="nombre"> 
-        </p>
-    <p>
-        <label for="email"> mail: </label>
-        <input type="email" name="email" id="email"> 
-      </p>
+    <form action="/" method="get">
+
+    <div class="Padre">
+
+        <div class="nombre"> 
+            <label for="nombre"> Nombre: </label>
+            <input type="text" name="nombre" id="nombre"> 
+        </div>
+
+        <div class="nombre">
+
+            <label for="email"> mail: </label>
+            <input type="email" name="email" id="email">
+
+        </div>
       
-      <p>
-         <label for="password"> contraseña: </label>
-        <input type="password" name="password" id="password"> 
-      </p>
+        <div class="nombre">
 
-      <p>
-        <button type="submit"> </button>
-        <input type="submit" value="ENVIAR" required>
-      </p>
+            <label for="password"> contraseña: </label>
+            <input type="password" name="password" id="password"> 
+
+        </div>
+
+        
 
     
+    </div>
+
+    <div>
+
+        <input type="submit" value="confirmar"> 
     
+    </div>
+
 
 
  
-
+    </form>
 </body>
 </html>

@@ -1,22 +1,9 @@
 body{
     background-color: black;
-     
-    }
-
-h1{
-    margin: 24px, 10px ;
 }
 
-input{ color: royalblue};
-label{ color: white;}
-
-
-.nombre {color: white}
-h1  {color: white;}
-
-
 .Padre{
-
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,10 +15,9 @@ h1  {color: white;}
     margin-top: 30px;
 }
 
-
 .boton{
     text-align: center;
-    font-size: 28px;
+    font-size: 30px;
 }
 
 header{
@@ -43,11 +29,6 @@ header{
     margin-bottom: 15px;
     margin-top: 60px;
 }
-
-p {
-    width: 130px;
-    
-}    
 
 .link{
     text-align: center;
@@ -76,4 +57,3 @@ p {
     margin-top: 10%;
     margin-bottom: 10%;
 }
-

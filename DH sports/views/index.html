@@ -15,12 +15,14 @@
 
         <div class="nav-bar">
             <div class="logo"><img width="100px" src="images/logo.jpeg"></div>
-            <div class="burguer"><i class="fa-solid fa-bars"></i></div>
-            <div class="search-bar"><i class="fa-solid fa-magnifying-glass"></i>  Buscar producto</div>
-            <div class="iconos">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-user-large"></i>
+            <div class="burguer"><i class="fa-solid fa-bars" style="color:#FFF;"></i></div>
+            <div class="contenedor-busqueda">
+                <input type="text" name="busqueda" placeholder="Buscar" class="search-bar"><div class="lupa"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+                <div class="iconos">
+                <a href="http://localhost:3000/productcart"><i class="fa-solid fa-cart-shopping" style="color:#FFF;"></i></a>
+                <i class="fa-solid fa-heart" style="color:#FFF;"></i>
+                <a href="http://localhost:3000/login"><i class="fa-solid fa-user-large" style="color:#FFF;"></i></a>
             </div>
         </div>
         <ol class="barra-cat">
@@ -49,23 +51,23 @@
         <button type="submit" class="ver-todo">Ver todo <i class="fa-solid fa-arrow-right"></i></button>
 
         <div class="articulos">
-
-            <div class="contenedor-art">
-                <img width="250px" height="290px" src="images/Camiseta-Argentina.png">
-                    <p class="nombre-art">Camiseta Argentina</p>
-                <div class="descrip-art">
-                    <div class="precio">$17.000</div>
-                    <div class="descuento">20%</div>
-                    <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
+            <a href="http://localhost:3000/productdetail">
+                <div class="contenedor-art">
+                    <img width="250px" height="290px" src="images/Camiseta-Argentina.png">
+                        <p class="nombre-art">Camiseta Argentina</p>
+                    <div class="descrip-art">
+                        <div class="precio">$17.000</div>
+                        <div class="descuento">20%</div>
+                        <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
             <div class="contenedor-art">
                 <img width="250px" height="290px" src="images/pelota.jpg">
                     <p class="nombre-art">Pelota Al Rihla</p>
                 <div class="descrip-art">
                     <p class="precio">$10.000</p>
-                    <p class="descuento"></p>
                     <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
                 </div>
             </div>
@@ -85,7 +87,6 @@
                     <p class="nombre-art">Palo hockey</p>
                 <div class="descrip-art">
                     <p class="precio">$9.000</p>
-                    <p class="descuento"></p>
                     <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
                 </div>
             </div>
@@ -111,7 +112,6 @@
                     <p class="nombre-art">Camiseta Chicago bulls</p>
                 <div class="descrip-art">
                     <p class="precio">$15.000</p>
-                    <p class="descuento"></p>
                     <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
                 </div>
             </div>
@@ -127,7 +127,7 @@
                     <p class="nombre-art">Camiseta suplente Argentina</p>
                 <div class="descrip-art">
                     <p class="precio">$17.000</p>
-                    <p class="descuento"></p>
+
                     <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
                 </div>
             </div>

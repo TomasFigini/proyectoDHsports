@@ -4,11 +4,28 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
+a:link {
+    color: #FFF;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+a:visited {
+    color: #FFF;
+    background-color: transparent;
+    text-decoration: none;
+}
+
 .nav-bar{
-    background-color:#8EA8BF ;
+    background-color:black ;
     display: flex;
     justify-content: space-between;
     padding: 13px;
+}
+
+.contenedor-busqueda{
+    position: relative;
 }
 
 .search-bar{
@@ -18,9 +35,18 @@
     padding-right: 25%;
     border-color: grey;
     color: grey;
-    border-radius: 3%;
+    border-radius: 15px;
     height: 30px;
+    border: transparent;
+    padding-left: 10px;
+    margin-left: -20px;
 } 
+
+.lupa{
+    position: absolute;
+    top: 6px;
+    left: 10pc;
+}
 
 .banner{
     margin-bottom: 20px;
@@ -41,7 +67,7 @@
 }
 
 body{
-    background-color: #262626;
+    background-color: #1C1C1F;
 }
 
 .titulo{
@@ -69,6 +95,14 @@ body{
 .descrip-art{
     display: flex;
     position: relative;
+}
+
+.descuento{
+    background-color: green;
+    border-radius: 17px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
 }
 
 .nombre-art{
@@ -163,6 +197,7 @@ body{
 
     .search-bar{
         margin-top: 30px;
+        width: 187%;
     }
 
     .banner{
@@ -189,8 +224,8 @@ body{
     display: flex;
     list-style: none;
     justify-content: center;
-    background-color: #8EA8BF;
-    padding-bottom: 10px;
+    background-color: black;
+    padding-bottom: 30px;
     }
 
     li{
@@ -200,4 +235,20 @@ body{
     .fa-solid{
         margin-left: 15px;
     }
+
+    .lupa{
+        top: 35px;
+        left: 13pc;
+    }
+
+    a:hover {
+        color: #9E9EB1;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a{
+        cursor: pointer;
+    }
+
 }

@@ -1,89 +1,86 @@
 *{
-    font-family: 'Roboto' sans-serif;
+    font-family: 'roboto', sans-serif;
     box-sizing: border-box;
 }
 
 body{
     margin: 0;
-    background-color: #BFBFBF;
+    background-color: #1C1C1F;
+}
+
+
+.main-header{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+    height: 100px;
 }
 
 .top-logo{
-    display: block;
-    position: relative;
-    margin: 0px;
-    width: 80px;
-    left: 506px;
-    height: 51px;
+    display: flex;
+    align-self: center;
+    order: 1;
+    width: 90px;
+}
+
+.icons{
+    display: flex;
+    order: 2;
+    width: 95px;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.icons a{
+    color: white;
 }
 
 .burger-menu{
-    display: block;
-    position: relative;
-    width: 50px;
-    height: 56px;
-    left: -444px;
-    top: 20px;
-}
-
-.burger{
-    padding: 12px;
+    display: flex;
+    align-self: center;
+    color: white;
 }
 
 .nav-bar{
     display: flex;
-    flex-wrap: nowrap;
-    height: 75px;
-}
-
-.input{
-    width: 270px;
-    display: block;
-    position: relative;
-    left: 20px;
+    flex-direction: row;
+    background-color: aliceblue;
+    color: gray;
+    border-color: gray;
+    height: 33px;
+    justify-content: center;
 }
 
 .nav-bar .form{
-    display: block;
-    width: 400px;
-    position: relative;
-    top: 34px;
-    height: 30px;
-    background-color: beige;
-    border: 1px black solid;
-    border-radius: 17px;
-    z-index: 1;
-    padding: 5px;
-  
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-
-.nav-bar-icons{
-    display: block;
-    width: 110px;
-    padding: 5px;
-    height: 39px;
-    position: relative;
-    top: 65px;
-    left: -19px;
-  }
 
 .lupa{
-    display: inline-block;
-    position: relative;
-    margin: 0px;
-    left: 303px;
-    top: -18px;
+    padding-left: 10px;
+    padding-top: 4px;
 }
 
-.main-header{
-    background-color: #8EA8BF;
-    margin: 0;
-    padding: 0;
-    border: 2px black solid;
-    height: 100px;
+.input{
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    align-self: center;
+    align-content: center;
 }
 
-.ruta-producto ul li{
+.ruta-producto{
+    display: flex;
+    width: 100%;
+    height: 25px;
+    margin: 12px;
+    justify-content: center;
+}
+
+.ruta-producto ul{
     display: inline-flex;
     margin: 0;
     padding: 0;
@@ -91,15 +88,31 @@ body{
     text-indent: none;
 }
 
+.ruta-producto ul li a{
+    color: white;
+}
+
+li a{
+    text-decoration: none;
+}
+
+.articulo{
+    width: 90%;
+    margin: auto;
+    background-color: #43545E;
+    border-radius: 10px;
+
+}
+
 .container{
     margin:auto;
-    background-color: #BFBFBF;
+    background-color: #E2E2DE;
     height: 422px;
     width: 375px;
     padding-bottom: 30px;
     padding-left: 10px;
     padding-right: 10px;
-    border: 2px black solid;
+    border: 1px black solid;
     position: relative;
     top: 8px;
 }
@@ -170,166 +183,221 @@ ul.slider li:target{
 }
 
 .product-title{
-    display: block;
-    margin: auto;
-    width: 97%;
-    background-color: #BFBFBF;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    text-align: center;
-    color: black;
-    border-radius: 11px;
+    display: flex;
+    height: 60px;
+    padding: 6px;
     border: 1px black solid;
-    position: relative;
-    top: 14px;
+    justify-content: center;
+    background-color: #0C7199;
 }
 
-.articulo{
-    background-color: rgb(55, 55, 55);
-    margin:auto;
+.title{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20pt;
 }
 
 #price-tag{
-    background-color: antiquewhite;
-    color: black;
-    font-size: 25pt;
-    width: max-content;
-    border: 1px black solid;
+    width: 35%;
+    display: flex;
     margin: auto;
+    justify-content: center;
+    height: 35px;
+    background-color: white;
     position: relative;
-    top: 12px;
+    top: 14px;
+    border-radius: 10px;
+}
+
+#price-tag span{
+    font-size: 19pt;
+    color: black;
+}
+
+.heart{
+    position: relative;
+    left: 65px;
+    bottom: 16px;
 }
 
 .fav-button{
-    display: flex;
-    position: relative;
-    margin-left: 70%;
-    padding: 12px;
-    border: 0;
-    background-color: #8EA8BF;
+    background-color: #43545E;
+    border: none;
+}
+
+.fav-button a{
+    color: red;
 }
 
 .tabla-talles{
-    display: block;
-    margin: 15px;
-    padding: 15px;
-    background-color: #BFBFBF;
+    width: 60%;
+    margin: auto;
+    background-color: #0C7199;
+    border-radius: 10px;
+    border: 3px white solid;
+    padding: 10px;
+}
+
+.tabla-talles summary{
+    text-align: center;
+    color: white;
+    list-style: none;
+    font-size: 17pt;
+}
+
+.tabla-talles form{
+    display: flex;
+    justify-content: center;
+    color: white;
+    border: 1px solid white;
+    height: 35px
+}
+
+.tabla-talles form label{
+    align-self: center;
+}
+
+.boton-añadir{
+    margin-top: 15px;
+
 }
 
 .añadir-button{
-    background-color: #BFBFBF;
-    border-radius: 20px;
-    text-decoration: none;
-    border: 2px black double;
+    width: 80%;
+    height: 55px;
+    background-color: #DBB63B;
     margin: auto;
-    font-size: 30pt;
+    border: 3px white solid;
+    border-radius: 70px;
     display: block;
-    width: 320x;
-    height: 90px;
+}
+
+.añadir-button b{
+    font-size: 18pt;
+    color: white;
+    text-decoration-line: underline;
+}
+
+.añadir-button i{
+    position: relative;
+    left: 5px;
+    bottom: 6px;
+    color: white;
 }
 
 .sku{
-    color: #BFBFBF;
-    display: block;
-    width: fit-content;
-    margin: auto;
-    font-size: 20px;
+    color: #9DBFE3;
+    text-align: center;
+
 }
 
 .description-container{
-    margin-bottom: 0;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: block;
-    border: 1px black solid;
-    padding: 15px;
-    padding-bottom: 0;
+    width: 90%;
+    margin: auto;
     background-color: #BFBFBF;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.descripcion{
-    display: block;
-    margin: 7px;
+.description-container details summary{
+    background-color: #737373;
+    list-style: none;
+    text-align: center;
+    font-size: 17pt;
+    color: white;
+    padding: 6px;
+    border-radius: 10px;
+    border: 2px white solid;
+
+}
+
+.description-container details summary b{
+    border-radius: 10px;
+    padding: 3px;
+
+}
+
+.description-container .descripcion{
+    padding: 10px;
+    text-align: center;
+   
 }
 
 .descripcion h2{
-    text-align: center;
-}
-
-h3{
-    text-align: center;
+    font-family: 'roboto';
 }
 
 .descripcion p{
     text-align: justify;
 }
 
-.especificaciones{
-    display: block;
-    margin: 7px;
+.description-container .especificaciones{
+    padding: 10px;
+    text-align: center;
 }
 
-.detalles{
-    display: block;
-    margin: 7px;
-    padding-bottom: 10px;
+.especificaciones div h3{
+    font-family: 'roboto';
+    font-size: 17pt;
+}
+
+.especificaciones div ul li{
+    list-style: square;
+}
+
+.especificaciones div ul{
+    text-align: justify;
+}
+
+.description-container .detalles{
+    padding: 10px;
+    text-align: center;
+}
+
+.detalles ul{
+    text-align: initial;
+}
+
+.detalles ul li{
+    list-style: square;
 }
 
 .contacto{
-    background-color: rgb(55, 55, 55);
+    width: 90%;
+    display: block;
     margin: auto;
-    
+    padding: 10px;
 }
 
 .phone-number1{
-    color: #BFBFBF;
-    display: block;
-    margin-left: 25px;
-    margin-right: 25px;
+    text-align: center;
+    color: white;
+    background-color: #BFBFBF;
+    height: 35px;
+    border-radius: 10px;
+}
+
+.phone-number1 h4{
+    font-size: 17pt;
+    padding: 5px;
 }
 
 .phone-number2{
-    color: #BFBFBF;
-    display: block;
-    margin: 25px;
+    text-align: center;
+    color: white;
+    background-color: #BFBFBF;
+    height: 35px;
+    border-radius: 10px;
+}
+
+.phone-number2 h4{
+    font-size: 17pt;
+    padding: 5px;
 }
 
 .bottom{
-    display: block;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 0;
-    background-color: #BFBFBF;
     padding: 15px;
-    border: 1px black solid;
-}
-
-.atencion-cliente{
-    display: block;
-    margin: 10px;
-}
-
-.aboutus{
-    display: block;
-    margin: 10px;
-}
-
-.cuenta{
-    display: block;
-    margin: 10px;
-}
-
-h4{
-    margin-top: 0;
-    padding-top: 15px;
-}
-
-details{
-    padding: 15px;
-    background-color: #f6f7f8;
-    margin-bottom: 20px;
-}
-
-summary {
-    cursor: pointer;
+    background-color: #737373;
+    margin: 25px 9px 9px 9px;
 }

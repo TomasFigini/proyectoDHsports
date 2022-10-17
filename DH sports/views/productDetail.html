@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/productDetail.css">
+    <link rel="stylesheet" href="css/styles-productDetail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,26 +13,25 @@
 </head>
 <body>
     <header class="main-header">
-        <section class="header-container">
-            <nav class="nav-bar">
-                <div class="top-logo">
-                    <img width='60px'src="images/Logo-DHSports.jpeg" alt="Logo DHSports">
-                </div>
-                <div class="form" action="#" method="GET">
-                    <div class="input">Buscar productos, marcas y más</div>
-                    <div class="submit"><a href=""><i class="lupa fa fa-search"></i></a></div>
-                </div>
-                <div class="burger-menu">
-                    <i class="burger fa fa-bars burger fa-2x"></i>
-                </div>
-                <div class="nav-bar-icons">
-                    <a href="/register"><i class="fa-solid fa-user fa-xl"></i></a>
-                    <a href="/productCart"><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
-                    <a href="/favoritos"><i class="fa-solid fa-heart fa-xl"></i></a>
-                </div>
-            </nav>
-        </section>
+        <div class="top-logo">
+            <img width='90px' src="images/Logo-DHSports.jpeg" alt="Logo DHSports">
+        </div>
+        <div class="burger-menu">
+             <i class="burger fa fa-bars burger fa-2x"></i>
+        </div>
+        <div class="icons">
+            <a href="/register"><i class="fa-solid fa-user fa-xl"></i></a>
+            <a href="/productCart"><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
+            <a href="/favoritos"><i class="fa-solid fa-heart fa-xl"></i></a>
+        </div>
     </header>
+        <section class="nav-bar">
+            <div class="form" action="#" method="GET">
+                <div class="input">Buscar productos, marcas y más 
+                    <i class="lupa fa fa-search"></i>  
+                 </div>
+             </div>
+        </section>
     <main>
         <header>
             <div class="ruta-producto">
@@ -66,36 +65,40 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="product-title">
-                    <h1 class="title"><b>Camiseta Titular Argentina</b></h1>
-                    </div>
-                <div id="price-tag">
-                    <span>  $17.000  </span>
-                </div>
-               <div>
-                    <button type='submit'class="fav-button">
-                        <a href="/favoritos"><i class="fa-solid fa-heart fa-2xl"></i></a>
-                    </button>
-                </div>
-                    <details class="tabla-talles">
-                        <summary><b>Tabla de talles</b></summary>
-                        <form action="#" method="post">
-                            <label for="talle">XS<input type="radio" name="talle" value="XS"></label>
-                            <label for="talle">S<input type="radio" name="talle" value="S"></label>
-                            <label for="talle">M<input type="radio" name="talle" value="M"></label>
-                            <label for="talle">L<input type="radio" name="talle" value="L"></label>
-                            <label for="talle">XL<input type="radio" name="talle" value="XL"></label>
-                        </form>
-                    </details>
-                        <button type="submit" class="añadir-button">
-                            <b><em>Añadir al carrito</em></b>
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
+                    <section class="product-data">
+                        <div class="product-title">
+                            <h1 class="title"><b>Camiseta Titular Argentina</b></h1>
+                        </div>
+                        <div id="price-tag">
+                            <span>  $17.000  </span>
+                        </div>
+                        <div class="heart">
+                            <button type='submit' class="fav-button">
+                                <a href="/favoritos"><i class="fa-solid fa-heart fa-2xl"></i></a>
+                            </button>
+                        </div>
+                        <details class="tabla-talles">
+                            <summary>Tabla de talles</summary>
+                            <form action="#" method="post">
+                                <label for="talle">XS<input type="radio" name="talle" value="XS"></label>
+                                <label for="talle">S<input type="radio" name="talle" value="S"></label>
+                                <label for="talle">M<input type="radio" name="talle" value="M"></label>
+                                <label for="talle">L<input type="radio" name="talle" value="L"></label>
+                                <label for="talle">XL<input type="radio" name="talle" value="XL"></label>
+                            </form>
+                        </details>
+                        <div class="boton-añadir">
+                            <button type="submit" class="añadir-button">
+                                <b>AGREGAR AL CARRITO</b>
+                                <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+                            </button>
+                        </div>    
                         <p class="sku">Item No. HB9217</p>
+                    </section>
                     <section class="description-container">
                             <details class="descripcion">
                                 <summary><b>Descripcion</b></summary>
-                                <h2>La nueva camiseta de Argentina para los hinchas de la selección, hecha con material reciclado</h2>
+                                <h2>La nueva camiseta de Argentina para los hinchas de la selección, hecha con material reciclado.</h2>
                                 <p>
                                     100% Argentina. Diseñada para los hinchas, ofrece comodidad en todo momento gracias a su tejido suave con tecnología de absorción AEROREADY. Los detalles en la parte interior trasera del cuello están inspirados en la bandera nacional que los jugadores representan con tanto orgullo.
 

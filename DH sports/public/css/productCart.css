@@ -38,6 +38,11 @@ main {
     display: flex;
 }
 
+/* Iconos del Header */
+.fa-cart-shopping {
+    display: none
+}
+
 .img-container {
     width: 100px;
     height: 100px;

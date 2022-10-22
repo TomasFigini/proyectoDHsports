@@ -122,10 +122,45 @@ body{
     background-color: #335AA6;
 }
 
+.contenedor-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.telefonos-contacto {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
 .contacto{
     background-color: #595959;
-    margin-bottom: 10px;
+    padding: 10px 0;
     color: #E3E3E3;
+    text-align: center;
+    justify-content: center;
+    border: solid 1px #595959;
+    width: 70%;
+    margin: 5px auto;
+    border-radius: 15px;
+}
+
+.bottom{
+    padding: 15px;
+    margin: 10px;
+}
+
+details.atencion-cliente {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 2px;
+    border-top: solid 2px;
+}
+
+details.aboutus {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 2px;
 }
 
 .horario{
@@ -134,8 +169,13 @@ body{
 
 .redes{
     display: flex;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    justify-content: center;
+}
+
+.redes .fa-brands {
+    padding: 10px;
 }
 
 .logo{

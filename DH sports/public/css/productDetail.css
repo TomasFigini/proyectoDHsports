@@ -8,7 +8,6 @@ body{
     background-color: #1C1C1F;
 }
 
-
 .main-header{
     background-color: black;
     display: flex;
@@ -43,25 +42,10 @@ body{
     color: white;
 }
 
-.nav-bar{
-    display: flex;
-    flex-direction: row;
-    background-color: aliceblue;
-    color: gray;
-    border-color: gray;
-    height: 33px;
-    justify-content: center;
-}
-
 .nav-bar .form{
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-.lupa{
-    padding-left: 10px;
-    padding-top: 4px;
 }
 
 .input{

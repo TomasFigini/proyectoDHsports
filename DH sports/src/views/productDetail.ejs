@@ -4,12 +4,14 @@
     <%- include('./partials/head') %> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">    
     <link rel="stylesheet" href="css/productDetail.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">    
     <title>Detalle de producto</title>
 </head>
 <body>
-    <header class="main-header">
-        <div class="top-logo">
+    <header>
+        <%- include('./partials/header') %> 
+    <!--    <div class="top-logo">
             <img width='90px' src="images/Logo-DHSports.jpeg" alt="Logo DHSports">
         </div>
         <div class="burger-menu">
@@ -20,75 +22,59 @@
             <a href="/productCart"><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
             <a href="/favoritos"><i class="fa-solid fa-heart fa-xl"></i></a>
         </div>
+    -->    
     </header>
-        <section class="nav-bar">
-            <div class="form" action="#" method="GET">
-                <div class="input">Buscar productos, marcas y más 
-                    <i class="lupa fa fa-search"></i>  
-                 </div>
-             </div>
-        </section>
-    <main>
-        <header>
-            <div class="ruta-producto">
-                <ul>
-                    <li><a href="/index.html"><i>Inicio ></i></a></li>
-                    <li><a href="#"><i>Hombre ></i></a></li>
-                    <li><a href="#"><i>Indumentaria</i></a></li>
+    <main>    
+        <div class="ruta-producto">
+            <ul>
+                <li><a href="/index.html"><i>Inicio ></i></a></li>
+                <li><a href="#"><i>Hombre ></i></a></li>
+                <li><a href="#"><i>Indumentaria</i></a></li>
+            </ul>
+        </div>    
+        <section class="articulo">
+            <div class="container">
+                <ul class="slider">
+                    <li id="slide1"><img width='250px' src="images/Camiseta-Argentina.png" alt="Camiseta seleccion Argentina"></li>
+                    <li id="slide2"><img width='250px' src="images/camiseta-Arg-Back.jpg" alt="Camiseta seleccion p/ atras"></li>
+                    <li id="slide3"><img width='250px' src="images/camiseta-argentina-messi.jpg" alt="Camiseta seleccion messi"></li>
+                    <li id="slide4"><img width='250px' src="images/camiseta-argentina-equipo.jpg" alt="Camiseta seleccion equipo"></li>
+                </ul>
+                <ul class="menu-slider">
+                    <li><a href="#slide1"><i class="fa-solid fa-circle-dot"></i></a></li>
+                    <li><a href="#slide2"><i class="fa-solid fa-circle-dot"></i></a></li>
+                    <li><a href="#slide3"><i class="fa-solid fa-circle-dot"></i></a></li>
+                    <li><a href="#slide4"><i class="fa-solid fa-circle-dot"></i></a></li>
                 </ul>
             </div>
-        </header>
-        <section class="articulo">
-                    <div class="container">
-                        <ul class="slider">
-                            <li id="slide1"><img width='250px' src="images/Camiseta-Argentina.png" alt="Camiseta seleccion Argentina"></li>
-                            <li id="slide2"><img width='250px' src="images/camiseta-Arg-Back.jpg" alt="Camiseta seleccion p/ atras"></li>
-                            <li id="slide3"><img width='250px' src="images/camiseta-argentina-messi.jpg" alt="Camiseta seleccion messi"></li>
-                            <li id="slide4"><img width='250px' src="images/camiseta-argentina-equipo.jpg" alt="Camiseta seleccion equipo"></li>
-                        </ul>
-                        <ul class="menu-slider">
-                            <li>
-                                <a href="#slide1"><i class="fa-solid fa-circle-dot"></i></a>
-                            </li>
-                            <li>
-                                <a href="#slide2"><i class="fa-solid fa-circle-dot"></i></a>
-                            </li>
-                            <li>
-                                <a href="#slide3"><i class="fa-solid fa-circle-dot"></i></a>
-                            </li>
-                            <li>
-                                <a href="#slide4"><i class="fa-solid fa-circle-dot"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <section class="product-data">
-                        <div class="product-title">
-                            <h1 class="title"><b>Camiseta Titular Argentina</b></h1>
-                        </div>
-                        <div id="price-tag">
-                            <span>  $17.000  </span>
-                        </div>
-                        <div class="heart">
-                            <button type='submit' class="fav-button">
-                                <a href="/favoritos"><i class="fa-solid fa-heart fa-2xl"></i></a>
-                            </button>
-                        </div>
-                        <details class="tabla-talles">
-                            <summary>Tabla de talles</summary>
-                            <form action="#" method="post">
-                                <label for="talle">XS<input type="radio" name="talle" value="XS"></label>
-                                <label for="talle">S<input type="radio" name="talle" value="S"></label>
-                                <label for="talle">M<input type="radio" name="talle" value="M"></label>
-                                <label for="talle">L<input type="radio" name="talle" value="L"></label>
-                                <label for="talle">XL<input type="radio" name="talle" value="XL"></label>
-                            </form>
-                        </details>
+        <section class="product-data">
+            <div class="product-title">
+                <h1 class="title"><b>Camiseta Titular Argentina</b></h1>
+            </div>
+            <div id="price-tag">
+                <span>  $17.000  </span>
+            </div>
+            <div class="heart">
+                <button type='submit' class="fav-button">
+                    <a href="/favoritos"><i class="fa-solid fa-heart fa-2xl"></i></a>
+                </button>
+            </div>
+            <details class="tabla-talles">
+                <summary>Tabla de talles</summary>
+                    <form action="#" method="post">
+                        <label for="talle">XS<input type="radio" name="talle" value="XS"></label>
+                        <label for="talle">S<input type="radio" name="talle" value="S"></label>
+                        <label for="talle">M<input type="radio" name="talle" value="M"></label>
+                        <label for="talle">L<input type="radio" name="talle" value="L"></label>
+                        <label for="talle">XL<input type="radio" name="talle" value="XL"></label>
+                    </form>
+                    </details>
                         <div class="boton-añadir">
                             <button type="submit" class="añadir-button">
                                 <b>AGREGAR AL CARRITO</b>
                                 <i class="fa-solid fa-cart-shopping fa-2xl"></i>
                             </button>
-                        </div>    
+                        </div>        
                         <p class="sku">Item No. HB9217</p>
                     </section>
                     <section class="description-container">
@@ -132,43 +118,8 @@
                     </section>
         </section>
     </main>    
-        <footer class="contacto">
-            <div class="phone-number1">
-                <h4><i class="fa-solid fa-phone"></i><b>  0800-111-1234 DH</b></h4>
-            </div>
-            <div class="phone-number2">
-                <h4><i class="fa-regular fa-comment"></i><b> +54 911 1178235278</b></h4>
-            </div>
-            <div class="bottom">
-                <details class="atencion-cliente">
-                    <summary>
-                       <b>Horarios de atencion al cliente</b>
-                    </summary>
-                    <ul>
-                        <li><p>Lunes a viernes de 08:30hs a 18:30hs.</p></li>
-                        <li><p>Sabados de 09hs a 17.30hs</p></li>
-                       </ul>
-                </details>
-                <details class="aboutus">
-                    <summary>
-                        <b>Sobre Nosotros</b>
-                    </summary>
-                    <article>
-                        Somos una empresa ficticia creada a partir de un grupo de estudiantes de DigitalHouse, nuestro proposito es crear una pagina con una interfaz grafica y experiencia
-                        agradable al usuario, dandole mucha importancia a la operabilidad y funcionalidad del proyecto.
-                    </article>
-                </details>
-                <details class="cuenta">
-                    <summary>
-                        <b>Cuenta</b>
-                    </summary>
-                    <ul>
-                        <li><a href="/register"><i class="fa-solid fa-users"></i><button>Registrarme</button></a></li>
-                        <li><a href="/login"><i class="fa-solid fa-user"></i><button>Iniciar sesion</button></a></li>
-                        <li><i class="fa-regular fa-file"></i><button><b>Terminos y condiciones {DH}</b></button></li>
-                    </ul>
-                </details>
-            </div>
+        <footer class="footer">
+            <%- include('./partials/footer') %> 
         </footer>
 </body>
 </html>

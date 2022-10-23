@@ -10,8 +10,6 @@ router.get('/login', mainControllers.login);
 
 router.get('/productdetail', mainControllers.productdetail);
 
-router.get('/productdetail/:id', mainControllers.productdetail)
-
 router.get('/productcart', mainControllers.productcart);
 
-module.exports=router;
+module.exports = router;

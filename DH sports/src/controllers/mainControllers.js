@@ -1,26 +1,26 @@
-const path=require('path');
+const path = require('path');
 
-let mainControllers={
+let mainControllers = {
 
-    index:(req,res)=>{
+    index:(req,res) => {
         res.render('index');
     },
 
-    register:(req,res)=>{
+    register:(req,res) => {
         res.render('users/register');
     },
 
-    login:(req,res)=>{
+    login:(req,res) => {
         res.render('users/login');
     },
 
-    productcart:(req,res)=>{
-        res.render('productcart');
+    productcart:(req,res) => {
+        res.render('products/productcart');
     },
 
-    productdetail:(req,res)=>{
-        res.render('productdetail');
-    }
+    productdetail:(req,res) => {
+        res.render('products/productdetail');
+    },
 }
 
-module.exports= mainControllers;
+module.exports = mainControllers;

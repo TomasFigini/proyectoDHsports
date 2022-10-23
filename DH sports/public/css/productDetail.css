@@ -253,7 +253,7 @@ ul.slider li:target{
     background-color: #DBB63B;
     margin: auto;
     border: 3px white solid;
-    border-radius: 70px;
+    border-radius: 10px;
     display: block;
 }
 
@@ -380,8 +380,3 @@ ul.slider li:target{
     padding: 5px;
 }
 
-.bottom{
-    padding: 15px;
-    background-color: #737373;
-    margin: 25px 9px 9px 9px;
-}

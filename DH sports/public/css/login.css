@@ -1,5 +1,5 @@
-body{
-    background-color: black;
+main {
+    background-color: #1C1C1F;
      
     }
 
@@ -7,52 +7,71 @@ h1{
     margin: 24px, 10px ;
 }
 
-input{ color: royalblue};
-label{ color: white;}
+input {
+    color: royalblue;
+    border-radius: 10px;
+    height: 25px;
+    padding: 2px;
+}
 
+.nombre label {
+    color: white;
+    margin-bottom: 2px;
+}
 
-.nombre {color: white}
+.nombre {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    min-width: 300px;
+}
+
+.recordarme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recordarme label {
+    margin-left: 2px;
+    color: lightgray
+}
+
 h1  {color: white;}
 
+.login-form {
+    width: 90%;
+    margin: auto;
+    max-width: 600px;
+}
 
 .Padre{
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: solid 3px black;
     padding: 15px;
     box-sizing: border-box;
     text-align: center;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin: auto;
 }
-
 
 .boton{
     text-align: center;
     font-size: 28px;
 }
 
-/*header{
+.boton input {
+    width: 200px;
+    color: #262626;
+    background-color: whitesmoke;
+}
 
-    color: white;
-    text-align: center;
-    font-size:28px ;
-    border-bottom: solid 10px white;
-    margin-bottom: 15px;
-    margin-top: 60px;
-}*/
 
 h4 {
     color: white;
     text-align: center;
 }
-
-p {
-    width: 130px;
-    
-}    
 
 .link{
     text-align: center;

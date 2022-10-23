@@ -1,38 +1,58 @@
 body{
-    background-color: black;
+    background-color: #1C1C1F;
 }
 
 .Padre{
-    color: white;
+    color: whitesmoke;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: solid 3px black;
     padding: 15px;
     box-sizing: border-box;
     text-align: center;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin: auto
+}
+
+.register-form {
+    width: 90%;
+    margin: auto;
+    max-width: 600px;
+}
+
+input {
+    color: royalblue;
+    border-radius: 10px;
+    height: 25px;
+    padding: 2px;
 }
 
 .boton{
     text-align: center;
-    font-size: 30px;
+    font-size: 28px;
 }
 
-/*header{
-
-    color: white;
-    text-align: center;
-    font-size:28px ;
-    border-bottom: solid 10px white;
-    margin-bottom: 15px;
-    margin-top: 60px;
-}*/
+.boton input {
+    width: 200px;
+    color: #262626;
+    background-color: whitesmoke;
+}
 
 h4 {
     color: white;
     text-align: center;
+}
+
+.nombre {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    min-width: 250px;
+}
+
+.nombre label {
+    color: white;
+    margin-bottom: 2px;
 }
 
 .link{
@@ -41,27 +61,6 @@ h4 {
     margin-bottom: 15px;
 }
 
-.footer{
-    padding-top: 10px;
-    background-color: #335AA6;
-}
-
-.contacto{
-    background-color: #595959;
-    margin-bottom: 10px;
-    color: #E3E3E3;
-    
-}
-
-.horario{
-    text-align: center;
-}
-
-.redes{
-    display: flex;
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
 main {
     padding-top: 20px;
 }

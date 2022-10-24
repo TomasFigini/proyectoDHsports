@@ -23,3 +23,5 @@ app.use('/login',routerMain);
 app.use('/productdetail',routerMain);
 
 app.use('/productcart',routerMain);
+
+app.use('/productedit', routerMain);

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <title>Editor Producto</title>
+    <link rel="stylesheet" href="css/editorProducto.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+    <form action="/" method="get">
+        <label class="label">
+            <input type="text" name="nombreProducto" placeholder="Nombre del producto" class="input">
+            <input type="text" name="precio" placeholder="Precio del producto" class="input">
+
+            <div class="categoria">
+                <details>
+                    <summary class="summary">
+                        Talle del producto
+                    </summary>
+                    <ul class="talle">
+                        <li><input type="radio" name="talle">XXL</li>
+                        <li><input type="radio" name="talle">XL</li>
+                        <li><input type="radio" name="talle">L</li>
+                        <li><input type="radio" name="talle">M</li>
+                        <li><input type="radio" name="talle">S</li>
+                        <li><input type="radio" name="talle">XS</li>
+                    </ul>
+                </details>
+            </div>
+
+            <div class="categoria">
+                <details>
+                    <summary class="summary">
+                        Tipo de producto
+                    </summary>
+                    <ul class="talle">
+                        <li><input type="radio" name="talle">Ropa</li>
+                        <li><input type="radio" name="talle">Zapatilla</li>
+                        <li><input type="radio" name="talle">Accesorio</li>
+                        <li><input type="radio" name="talle">Otro</li>
+                    </ul>
+                </details>
+            </div>
+
+            <div class="confirmar"><input type="submit" value="Confirmar" class="boton"></div>
+        </label>
+
+    </form>
+
+
+    <footer class="footer">
+        <%- include('../partials/footer') %>
+    </footer> 
+</body>
+</html>

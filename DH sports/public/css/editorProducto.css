@@ -1,0 +1,53 @@
+.talle{
+    display: flex;
+    color: white;
+}
+
+.summary{
+    color: white;
+}
+
+ul{
+    list-style-type: none;
+    justify-content: space-between;
+} 
+
+.input{
+    width: 19pc;
+    height: 2pc;
+    border-radius: 17px;
+    padding-left: 10px;
+    border: transparent;
+    margin-bottom: 20px;
+    width: 88%;
+}
+
+.label{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 55%;
+    justify-content: center;
+    margin-left: 20%;
+}
+.boton{
+    border-radius: 17px;
+    border: transparent;
+    padding: 10px;
+}
+
+.confirmar{
+    width: 100%;
+    color: #00a650;
+}
+
+.boton{
+    background-color: #00a650;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.categoria{
+    width: 100%;
+    margin-bottom: 20px;
+}

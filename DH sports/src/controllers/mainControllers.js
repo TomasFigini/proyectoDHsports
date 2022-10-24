@@ -21,6 +21,10 @@ let mainControllers = {
     productdetail:(req,res) => {
         res.render('products/productdetail');
     },
+
+    productedit:(req,res) => {
+        res.render('products/editorProducto');
+    }
 }
 
 module.exports = mainControllers;

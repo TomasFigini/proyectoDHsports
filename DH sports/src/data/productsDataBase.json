@@ -1,0 +1,90 @@
+[
+    {        
+  "id": 1,
+  "name": "Camiseta Argentina",
+  "price": 17000,
+  "discount": 20,
+  "brand": "Adidas",
+  "category": "Hombre",
+  "sport": "Fútbol",
+  "description": "Camiseta del seleccionado argentino de fútbol",
+  "image": "Camiseta-Argentina.png"
+    },
+    {        
+  "id": 2,
+  "name": "Pelota Al Rihla",
+  "price": 10000,
+  "discount": 0,
+  "brand": "Adidas",
+  "category": "Hombre",
+  "sport": "Fútbol",
+  "description": "Pelota de fútbol Al Rihla",
+  "image": "pelota.jpg"
+    },
+    {        
+  "id": 3,
+  "name": "Zapatillas Running",
+  "price": 20000,
+  "discount": 5,
+  "brand": "Puma" ,
+  "category": "Hombre",
+  "sport": "Running",
+  "description": "Zapatillas Running",
+  "image": "running.jpg"
+    },
+    {        
+  "id": 4,
+  "name": "Palo de Hockey",
+  "price": 9000,
+  "discount": 0,
+  "brand": "Simbra",
+  "category": "Mujer",
+  "sport": "Hockey",
+  "description": "Palo de hockey Simbra",
+  "image": "Hockey.jpg"
+    },
+    {        
+  "id": 5,
+  "name": "Botines de Rugby",
+  "price": 30000,
+  "discount": 10,
+  "brand": "Gilbert",
+  "category": "Hombre",
+  "sport": "Rugby",
+  "description": "Botines de rugby, tapones de acero",
+  "image": "botines-rugby.jpg"
+    },
+    {        
+  "id": 6,
+  "name": "Camiseta Chicago Bulls",
+  "price": 15000,
+  "discount": 0,
+  "brand": "Nike",
+  "category": "Hombre",
+  "sport": "Básquet",
+  "description": "Camiseta de básquet de Chicago Bulls",
+  "image": "camiseta-basket.jpg"
+    },
+    {        
+  "id": 7,
+  "name": "Camiseta Suplente Argentina",
+  "price": 17000,
+  "discount": 0,
+  "brand": "Adidas",
+  "category": "Hombre",
+  "sport": "Fútbol",
+  "description": "Camiseta suplente del seleccionado argentino de fútbol",
+  "image": "camiseta-suplente.jpg"
+    },
+    {        
+  "id": 8,
+  "name": "Guantes Boxeo",
+  "price": 10000,
+  "discount": 15,
+  "brand": "Everlast",
+  "category": "Hombre",
+  "sport": "Boxeo",
+  "description": "Guantes de boxeo Everlast",
+  "image": "guantes.jpg"
+    }
+]

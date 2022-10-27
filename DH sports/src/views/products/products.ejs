@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <link rel="stylesheet" href="css/productDetail.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">    
+    <title>Detalle de producto</title>
+</head>
+<body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+    <main>    
+        <div class="ruta-producto">
+            <ul>
+                <li><a href="/"><i>Inicio ></i></a></li>
+                <li><a href="#"><i>Hombre ></i></a></li>
+                <li><a href="#"><i>Indumentaria</i></a></li>
+            </ul>
+        </div>
+        <section class="articulo">
+            <div class="container">
+                <ul class="slider">
+                    <li id="slide1"><img width='250px' src="images/Camiseta-Argentina.png" alt="Camiseta seleccion Argentina"></li>
+                    <li id="slide2"><img width='250px' src="images/camiseta-Arg-Back.jpg" alt="Camiseta seleccion p/ atras"></li>
+                    <li id="slide3"><img width='250px' src="images/camiseta-argentina-messi.jpg" alt="Camiseta seleccion messi"></li>
+                    <li id="slide4"><img width='250px' src="images/camiseta-argentina-equipo.jpg" alt="Camiseta seleccion equipo"></li>
+                </ul>
+                <ul class="menu-slider">
+                    <li><a href="#slide1"><i class="fa-solid fa-circle-dot"></i></a></li>
+                    <li><a href="#slide2"><i class="fa-solid fa-circle-dot"></i></a></li>
+                    <li><a href="#slide3"><i class="fa-solid fa-circle-dot"></i></a></li>
+                    <li><a href="#slide4"><i class="fa-solid fa-circle-dot"></i></a></li>
+                </ul>
+            </div>
+            <section class="product-data">
+                <div class="product-title">
+                    <h1 class="title"><b>Camiseta Titular Argentina</b></h1>
+                </div>
+                <div id="price-tag">
+                    <span>  $17.000  </span>
+                </div>
+                <div class="heart">
+                    <button type='submit' class="fav-button">
+                        <a href="/favoritos"><i class="fa-solid fa-heart fa-2xl"></i></a>
+                    </button>
+                </div>
+                <details class="tabla-talles">
+                    <summary>Tabla de talles</summary>
+                        <form action="#" method="post">
+                            <label for="talle">XS<input type="radio" name="talle" value="XS"></label>
+                            <label for="talle">S<input type="radio" name="talle" value="S"></label>
+                            <label for="talle">M<input type="radio" name="talle" value="M"></label>
+                            <label for="talle">L<input type="radio" name="talle" value="L"></label>
+                            <label for="talle">XL<input type="radio" name="talle" value="XL"></label>
+                        </form>
+                        </details>
+                            <div class="boton-añadir">
+                                <button type="submit" class="añadir-button">
+                                    <b>AGREGAR AL CARRITO</b>
+                                    <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+                                </button>
+                            </div>        
+                            <p class="sku">Item No. HB9217</p>
+                        </section>
+                        <section class="description-container">
+                                <details class="descripcion">
+                                    <summary><b>Descripcion</b></summary>
+                                    <h2>La nueva camiseta de Argentina para los hinchas de la selección, hecha con material reciclado.</h2>
+                                    <p>
+                                        100% Argentina. Diseñada para los hinchas, ofrece comodidad en todo momento gracias a su tejido suave con tecnología de absorción AEROREADY. Los detalles en la parte interior trasera del cuello están inspirados en la bandera nacional que los jugadores representan con tanto orgullo.
+    
+                                        Un producto hecho parcialmente con contenido reciclado generado a partir de desechos de producción, tales como recortes de tela, y desechos domésticos postconsumo, para evitar un mayor impacto ambiental al producir contenido virgen. 
+                                    </p>
+                                </details>
+                                <details class="especificaciones">
+                                    <summary><b>Especificaciones</b></summary>
+                                    <div>
+                                        <h3>Instrucciones de Lavado</h3>
+                                        <ul>
+                                            <li>No usar blanqueador.</li>
+                                            <li>No utilizar secadora.</li>
+                                            <li>No lavar en seco.</li>
+                                            <li>Lavar a maquina en temperatura fria.</li>
+                                            <li>Planchar a temperatura baja.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+                                <details class="detalles">
+                                    <summary><b>Detalles</b></summary>
+                                    <ul>
+                                        <li>Corte ajustado</li>
+                                        <li>Cuello redondo</li>
+                                        <li>tejido de punto doble 100% poliester reciclado</li>
+                                        <li>Tecnologia de absorcion <b>AEROREADY</b></li>
+                                        <li>Paneles de malla en los costados</li>
+                                        <li>Puños acanalados</li>
+                                        <li>Dobladillo trasero alargado</li>
+                                        <li>Escudo bordado de la Seleccion Argentina</li>
+                                        <li>Color del articulo: White / Ligth Blue</li>
+                                        <li>Numero de articulo: HB9217</li>
+                                    </ul>
+                                </details>
+                        </section>
+            </section>
+        </main>    
+            <footer class="footer">
+                <%- include('../partials/footer') %> 
+            </footer>
+    </body>
+    </html>    

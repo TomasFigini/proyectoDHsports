@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 const path=require('path');
 const ejs = require('ejs');
-const routerMain= require('./src/routes/routerMain');
+const mainRouter= require('./src/routes/mainRouter');
 const productsRouter = require('./src/routes/productsRouter')
 const usersRouter = require('./src/routes/usersRouter')
+const cartRouter = require('./src/routes/cartRouter')
 
 app.use(express.static(path.join(__dirname, "public")));
 app.set('views',path.join(__dirname,'./src/views'));
@@ -14,14 +15,10 @@ app.listen(3000, ()=>{
     console.log('Server corriendo en el puerto 3000');
 });
 
-app.use('/',routerMain);
+app.use('/', mainRouter);
 
-app.use('/register',routerMain);
+app.use('/users', usersRouter);
 
-app.use('/login',routerMain);
+app.use('/products', productsRouter);
 
-app.use('/productdetail',routerMain);
-
-app.use('/productcart',routerMain);
-
-app.use('/productedit', routerMain);
+app.use('/productcart', cartRouter);

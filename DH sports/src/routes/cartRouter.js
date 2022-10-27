@@ -4,6 +4,6 @@ const cartControllers = require('../controllers/cartControllers');
 
 const router = express.Router();
 
-router.get('/:idPorducto')
+router.get('/productcart', cartControllers.index)
 
 module.exports = router

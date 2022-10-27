@@ -25,6 +25,8 @@ input {
     flex-direction: column;
     padding: 10px;
     min-width: 300px;
+    max-width: 450px;
+    margin: auto;
 }
 
 .recordarme {
@@ -82,13 +84,6 @@ h4 {
 .footer{
     padding-top: 10px;
     background-color: #335AA6;
-}
-
-.contacto{
-    background-color: #595959;
-    margin-bottom: 10px;
-    color: #E3E3E3;
-    
 }
 
 .horario{

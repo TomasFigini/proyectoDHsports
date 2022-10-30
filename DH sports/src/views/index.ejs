@@ -108,59 +108,52 @@
 
         <h2 class="titulo">Visto recientemente</h2>
         <button type="submit" class="ver-todo">Ver todo <i class="fa-solid fa-arrow-right"></i></button>
-
         <div class="articulos">
-
+            <% products.filter(product => product.estado == "visto").forEach(product => { %> 
             <div class="contenedor-art">
-                <img width="250px" height="290px" src="images/botines-rugby.jpg">
-                    <p class="nombre-art">Botines tapon acero</p>
+                <img width="250px" height="290px" src="images/<%= product.image %> ">
+                    <p class="nombre-art"><%= product.name %></p>
                 <div class="descrip-art">
-                    <p class="precio">$30.000</p>
-                    <p class="descuento">10%</p>
+                    <p class="precio"><%= product.price %> </p>
+                    <p class="descuento"><%= product.discount %> </p>
                     <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
                 </div>
             </div>
-
-            <div class="contenedor-art">
-                <img width="250px" height="290px" src="images/camiseta-basket.jpg">
-                    <p class="nombre-art">Camiseta Chicago bulls</p>
-                <div class="descrip-art">
-                    <p class="precio">$15.000</p>
-                    <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
-                </div>
-            </div>
+            <% }) %>        
         </div>
         
         <h2 class="titulo">Novedades</h2>
         <button type="submit" class="ver-todo">Ver todo <i class="fa-solid fa-arrow-right"></i></button>
 
         <div class="articulos">
-
+            <% products.forEach(product => { %>
             <div class="contenedor-art">
-                <img width="250px" height="290px" src="images/camiseta-suplente.jpg">
-                    <p class="nombre-art">Camiseta suplente Argentina</p>
+                <img width="250px" height="290px" src="images/<%= product.image %>">
+                    <p class="nombre-art"><%= product.name %></p>
                 <div class="descrip-art">
-                    <p class="precio">$17.000</p>
-
+                    <p class="precio"><%= product.price %></p>
+                    <p class="descuento"><%= product.discount %></p>
                     <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
                 </div>
             </div>
+            <% }) %> 
         </div>  
 
         <h2 class="titulo">Ofertas</h2>
         <button type="submit" class="ver-todo">Ver todo <i class="fa-solid fa-arrow-right"></i></button>
 
         <div class="articulos">
-
+            <% products.filter(product => product.discount > 0).forEach(product => { %>
             <div class="contenedor-art">
-                <img width="250px" height="290px" src="images/guantes.jpg">
-                    <p class="nombre-art">Guantes boxeo</p>
+                <img width="250px" height="290px" src="images/<%= product.image %>">
+                    <p class="nombre-art"><%= product.name %></p>
                 <div class="descrip-art">
-                    <p class="precio">$10.000</p>
-                    <p class="descuento">15%</p>
+                    <p class="precio"><%= product.price %></p>
+                    <p class="descuento"><%= product.discount %></p>
                     <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
                 </div>
             </div>
+            <% }) %> 
         </div>  
 
     </main>

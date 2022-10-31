@@ -9,10 +9,10 @@ let productsControllers = {
         res.render('products/products', {products})
     },
     detail: (req, res) => {
-        res.render('products/productdetail')
+        res.render('products/productdetail', {products})
     },
     edit: (req, res) => {
-        res.render('products/editorproducto')
+        res.render('products/editorproducto', {products})
     }
 }
 

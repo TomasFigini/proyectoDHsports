@@ -9,7 +9,9 @@ let productsControllers = {
         res.render('products/products', {products})
     },
     detail: (req, res) => {
-        res.render('products/productdetail', {products})
+        let productId = req.params.id;
+        let product = products.find(product => product.id == productId)
+        res.render('products/productdetail', {product: product})
     },
     edit: (req, res) => {
         res.render('products/editorproducto', {products})

@@ -10,6 +10,7 @@
     <header>
         <%- include('../partials/header') %>
     </header>
+
     <form action="/" method="get">
         <label class="label">
             <input type="text" name="nombreProducto" placeholder="Nombre del producto" class="input">
@@ -44,7 +45,10 @@
                     </ul>
                 </details>
             </div>
-
+            <div class="insert">
+                <label for="imagen" class="lab">Insertar imagen: </label>
+                <div><input type="file" nombre="archivo" id="imagen" class="inpimg"></div>
+            </div>
             <div class="confirmar"><input type="submit" value="Confirmar" class="boton"></div>
         </label>
 

@@ -18,7 +18,7 @@ ul{
     border-radius: 17px;
     padding-left: 10px;
     border: transparent;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 88%;
 }
 
@@ -51,3 +51,12 @@ ul{
     width: 100%;
     margin-bottom: 20px;
 }
+
+.insert{
+    margin: 20px;
+}
+
+.lab, .inpimg{
+    color: white;
+}
+

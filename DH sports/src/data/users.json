@@ -1,0 +1,20 @@
+[
+    {
+        "Identificador": 1,
+        "Nombre": "Lionel",
+        "Apellido": "Messi",
+        "Email": "LionelMessi@gmail.com",
+        "Contraseña": "lionelmessi",
+        "Categoría": "customer",
+        "Imagen": ""
+    },
+    {
+        "Identificador": 2,
+        "Nombre": "Lionel",
+        "Apellido": "Scaloni",
+        "Email": "Scaloneta@gmail.com",
+        "Contraseña": "scaloneta22",
+        "Categoría": "admin",
+        "Imagen": ""
+    } 
+]

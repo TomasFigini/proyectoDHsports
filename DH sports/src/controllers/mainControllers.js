@@ -19,11 +19,11 @@ let mainControllers = {
     },
 
     productcart:(req,res) => {
-        res.render('products/productcart');
+        res.render('products/productCart');
     },
 
     productdetail:(req,res) => {
-        res.render('products/productdetail');
+        res.render('products/productDetail');
     },
 
     productedit:(req,res) => {

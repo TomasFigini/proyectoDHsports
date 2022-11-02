@@ -8,7 +8,10 @@
   "category": "Hombre",
   "sport": "Fútbol",
   "description": "Camiseta del seleccionado argentino de fútbol",
-  "image": "Camiseta-Argentina.png",
+  "image1": "Camiseta-Argentina.png",
+  "image2": "camiseta-Arg-Back.jpg",
+  "image3": "camiseta-argentina-messi.jpg",
+  "image4": "camiseta-argentina-equipo.jpg",
   "estado": "visto"
     },
     {        
@@ -20,7 +23,10 @@
   "category": "Hombre",
   "sport": "Fútbol",
   "description": "Pelota de fútbol Al Rihla",
-  "image": "pelota.jpg",
+  "image1": "pelota.jpg",
+  "image2": "pelota-imagen2.jpg",
+  "image3": "pelota-imagen3.jpg",
+  "image4": "pelota-imagen4.jpg",
   "estado": "visto"
     },
     {        
@@ -32,7 +38,10 @@
   "category": "Hombre",
   "sport": "Running",
   "description": "Zapatillas Running",
-  "image": "running.jpg",
+  "image1": "running.jpg",
+  "image2": "zapatillas-imagen2.jpg",
+  "image3": "zapatillas-imagen3.jpg",
+  "image4": "zapatillas-imagen4.jpeg",
   "estado": "visto"
     },
     {        
@@ -44,7 +53,10 @@
   "category": "Mujer",
   "sport": "Hockey",
   "description": "Palo de hockey Simbra",
-  "image": "Hockey.jpg",
+  "image1": "Hockey.jpg",
+  "image2": "palo-hockey-imagen2.jpg",
+  "image3": "palo-hockey-imagen3.jpg",
+  "image4": "palo-hockey-imagen4.jpg",
   "estado": "no visto"
     },
     {        
@@ -56,7 +68,10 @@
   "category": "Hombre",
   "sport": "Rugby",
   "description": "Botines de rugby, tapones de acero",
-  "image": "botines-rugby.jpg",
+  "image1": "botines-rugby.jpg",
+  "image2": "botines-rugby-imagen2.jpeg",
+  "image3": "botines-rugby-imagen3.jpeg",
+  "image4": "botines-rugby-imagen4.jpeg",
   "estado": "visto"
     },
     {        
@@ -68,7 +83,10 @@
   "category": "Hombre",
   "sport": "Básquet",
   "description": "Camiseta de básquet de Chicago Bulls",
-  "image": "camiseta-basket.jpg",
+  "image1": "camiseta-basket.jpg",
+  "image2": "camiseta-basket-imagen2.jpg",
+  "image3": "camiseta-basket-imagen3.jpg",
+  "image4": "camiseta-basket-imagen4.jpg",
   "estado": "no visto"
     },
     {        
@@ -80,7 +98,10 @@
   "category": "Hombre",
   "sport": "Fútbol",
   "description": "Camiseta suplente del seleccionado argentino de fútbol",
-  "image": "camiseta-suplente.jpg",
+  "image1": "camiseta-suplente.jpg",
+  "image2": "camiseta-suplente-imagen2.webp",
+  "image3": "camiseta-suplente-imagen3.webp",
+  "image4": "camiseta-suplente-imagen4.webp",
   "estado": "visto"
     },
     {        
@@ -92,7 +113,10 @@
   "category": "Hombre",
   "sport": "Boxeo",
   "description": "Guantes de boxeo Everlast",
-  "image": "guantes.jpg",
+  "image1": "guantes.jpg",
+  "image2": "guantes-imagen2.webp",
+  "image3": "guantes-imagen3.webp",
+  "image4": "guantes-imagen4.webp",
   "estado": "no visto"
     }
 ]

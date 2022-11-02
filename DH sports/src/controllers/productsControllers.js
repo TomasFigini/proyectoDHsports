@@ -11,10 +11,10 @@ let productsControllers = {
     detail: (req, res) => {
         let productId = req.params.id;
         let product = products.find(product => product.id == productId)
-        res.render('products/productdetail', {product: product})
+        res.render('products/productDetail', {product})
     },
     edit: (req, res) => {
-        res.render('products/editorproducto', {products})
+        res.render('products/editorProducto', {products})
     }
 }
 

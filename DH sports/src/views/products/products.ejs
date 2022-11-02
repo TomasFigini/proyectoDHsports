@@ -3,8 +3,8 @@
 <head>
     <%- include('../partials/head') %> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">    
-    <link rel="stylesheet" href="css/productDetail.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">    
     <title>Todos los productos</title>
 </head>
@@ -12,7 +12,7 @@
     <header>
         <%- include('../partials/header') %>
     </header>
-    <img src="images/banner.jpg" alt="banner" class="banner" width="100%">
+    <img src="/images/banner.jpg" alt="banner" class="banner" width="100%">
     
     <div class="categorias">
         <div class="start-icon"><i class="fa-solid fa-futbol fa-border fa-2xl"></i></div>
@@ -27,7 +27,7 @@
             <% products.forEach(product => { %>
                 <a href="./products/detail/<%= product.id %>">
                     <div class="contenedor-art">
-                        <img src="images/<%= product.image %>" alt="Imagen de producto" width="250px" height="290px">
+                        <img src="/images/<%= product.image1 %>" alt="Imagen de producto" width="250px" height="290px">
                         <p class="nombre-art"><%= product.name %></p>
                         <div class="descrip-art">
                             <div class="precio"><%= product.price %></div>

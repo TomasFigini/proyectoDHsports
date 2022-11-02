@@ -3,34 +3,15 @@
 <head>
     <%- include('../partials/head') %> 
         
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/index.css"> 
     <link rel="stylesheet" href="/css/productDetail.css">
     <title>Detalle de producto</title>
 </head>
 <body>
     <header>
-        <!-- <%- include('../partials/header') %> -->
-        <div class="nav-bar">
-            <div class="logo"><a href="/"><img width="100px" src="/images/logo.jpeg"></a></div>
-            <div class="burguer"><i class="fa-solid fa-bars" style="color:#FFF;"></i></div>
-            <div class="contenedor-busqueda">
-                <input type="text" name="busqueda" placeholder="Buscar" class="search-bar"><div class="lupa"><i class="fa-solid fa-magnifying-glass"></i></div>
-            </div>
-                <div class="iconos">
-                <a href="/productcart"><i class="fa-solid fa-cart-shopping" style="color:#FFF;"></i></a>
-                <i class="fa-solid fa-heart" style="color:#FFF;"></i>
-                <a href="/users/login"><i class="fa-solid fa-user-large" style="color:#FFF;"></i></a>
-            </div>
-        </div>
-        <ol class="barra-cat">
-            <li><a href="#">Hombre</a></li>
-            <li><a href="#">Mujer</a></li>
-            <li><a href="#">Infantil</a></li>
-            <li><a href="#">Deporte</a></li>
-            <li><a href="#">Marca</a></li>
-            <li><a href="#">Accesorios</a></li>
-            
-        </ol>
+        
+        <%- include('../partials/header') %>
+
     </header>
     <main>    
         <div class="ruta-producto">
@@ -44,10 +25,10 @@
             <div class="container">
                  
                 <ul class="slider">
-                    <li id="slide1"><img width='250px' src="/images/<%= product.image %>" alt="Camiseta seleccion Argentina"></li>
-                    <li id="slide2"><img width='250px' src="/images/<%= product.image %>" alt="Camiseta seleccion p/ atras"></li>
-                    <li id="slide3"><img width='250px' src="/images/<%= product.image %>" alt="Camiseta seleccion messi"></li>
-                    <li id="slide4"><img width='250px' src="/images/<%= product.image %>" alt="Camiseta seleccion equipo"></li>
+                    <li id="slide1"><img width='250px' src="/images/<%= product.image1 %>" alt="Camiseta seleccion Argentina"></li>
+                    <li id="slide2"><img width='250px' src="/images/<%= product.image2 %>" alt="Camiseta seleccion p/ atras"></li>
+                    <li id="slide3"><img width='250px' src="/images/<%= product.image3 %>" alt="Camiseta seleccion messi"></li>
+                    <li id="slide4"><img width='250px' src="/images/<%= product.image4 %>" alt="Camiseta seleccion equipo"></li>
                 </ul>
                 <ul class="menu-slider">
                     <li><a href="#slide1"><i class="fa-solid fa-circle-dot"></i></a></li>

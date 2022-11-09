@@ -30,7 +30,7 @@
                         <img src="/images/<%= product.image1 %>" alt="Imagen de producto" width="250px" height="290px">
                         <p class="nombre-art"><%= product.name %></p>
                         <div class="descrip-art">
-                            <div class="precio"><%= product.price %></div>
+                            <div class="precio">$<%= product.price %></div>
                             <% if (product.discount > 0) { %> 
                             <div class="descuento"><%= product.discount %>% OFF</div>
                             <% } %> 

@@ -6,13 +6,13 @@
 }
 
 a:link {
-    color: #FFF;
+    color: black;
     background-color: transparent;
     text-decoration: none;
   }
 
 a:visited {
-    color: #FFF;
+    color: black;
     background-color: transparent;
     text-decoration: none;
 }
@@ -252,10 +252,6 @@ details.aboutus {
     .search-bar{
         margin-top: 30px;
         width: 187%;
-    }
-
-    .banner{
-        height: 250px;
     }
 
     .nav-bar{

@@ -15,6 +15,18 @@ let productsControllers = {
     },
     edit: (req, res) => {
         res.render('products/editorProducto', {products})
+    },
+
+    crear:(req,res)=>{
+
+    },
+
+    cambio:(req,res)=>{
+
+    },
+
+    borrar:(req,res)=>{
+
     }
 }
 

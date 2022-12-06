@@ -12,6 +12,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set('views', path.join(__dirname,'./src/views'));
 app.set('view engine','ejs');
 app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.listen(3000, ()=>{
     console.log('Server corriendo en el puerto 3000');

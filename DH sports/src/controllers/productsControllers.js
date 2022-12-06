@@ -13,20 +13,65 @@ let productsControllers = {
         let product = products.find(product => product.id == productId)
         res.render('products/productDetail', {product})
     },
-    edit: (req, res) => {
-        res.render('products/editorProducto', {products})
+    create: (req, res) => {
+        res.render('products/create', {products})
     },
 
-    crear:(req,res)=>{
+    store: (req, res) => {
 
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+        const data = req.body;
+
+        const newProduct = {
+            id: products.length > 0 ? products[products.length - 1].id + 1 : 1,
+            ...data,
+            image: req.file ? req.file.filename : 'default-image.png'
+        };
+
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.render('productCreate', {
+                errors: errors.mapped(),
+                oldData: req.body
+            });
+        }
+
+        products.push(newProduct);
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+
+        res.redirect('/products');
     },
 
     cambio:(req,res)=>{
 
     },
 
-    borrar:(req,res)=>{
+    delete: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+        const id = req.params.id;
+
+        const product = products.find(product => product.id == id);
+
+        res.render('productDelete', { product });
+    },
+    destroy: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+        const id = req.params.id;
+
+        const product = products.find(product => product.id == id);
+
+        const index = products.indexOf(product);
+
+        products.splice(index, 1);
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+
+        res.redirect('/products');
     }
 }
 

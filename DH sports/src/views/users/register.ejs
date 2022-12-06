@@ -16,7 +16,7 @@
     <main>
         <h4>Registrarme</h4>
         <div class="register-form">
-            <form action="/" method="get" enctype="multipart/form-data">                
+            <form action="/users/register" method="POST" enctype="multipart/form-data">                
                 <div class="Padre">                    
                     <div class="nombre"> 
                         <label for="nombre">Nombre</label>
@@ -30,7 +30,7 @@
                     </div>                    
                     <div class="nombre">                        
                         <label for="dni">DNI</label>
-                        <input type="number" name="number" id="number" required> 
+                        <input type="number" name="dni" id="number" required> 
                         <span class="feedback"></span>                        
                     </div>                    
                     <div class="nombre">                       
@@ -50,7 +50,12 @@
                     </div>
                     <div class="nombre">                        
                         <label for="repitpassword">Repetir Contraseña</label>
-                        <input type="repitpassword" name="repitpassword" required> 
+                        <input type="password" name="repitpassword" required> 
+                        <span class="feedback"></span>                        
+                    </div>
+                    <div class="nombre">                        
+                        <label for="avatar">Imagen de perfil</label>
+                        <input type="file" name="avatar"> 
                         <span class="feedback"></span>                        
                     </div>    
                 </div>                

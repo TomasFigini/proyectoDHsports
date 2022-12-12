@@ -37,6 +37,6 @@ const router = express.Router();
 router.get('/login', usersControllers.login);
 
 router.get('/register', usersControllers.register);
-router.post('/register',uploadFile.single('avatar'),validations, usersControllers.create);
+router.post('/register',uploadFile.single('avatar'),validations, usersControllers.processRegister);
 
 module.exports = router

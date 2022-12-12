@@ -21,7 +21,12 @@
                     <div class="nombre"> 
                         <label for="nombre">Nombre</label>
                         <input type="text" name="nombre" id="nombre" required>
-                        <span class="feedback"></span> 
+                        <span class="feedback"></span>
+                        <% if (locals.errors && errors.fullName){ %> 
+                            <div class="text-danger">
+                                <% errors.fullName.msg %> 
+                            </div>
+                        <% } %>  
                     </div>                    
                     <div class="nombre">                        
                         <label for="apellido">Apellido</label>

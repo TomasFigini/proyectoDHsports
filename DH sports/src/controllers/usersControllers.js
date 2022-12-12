@@ -1,4 +1,5 @@
 const path = require('path');
+const { validationResult }= require('express-validator');
 
 let usersControllers = {
     login:(req,res) => {
@@ -8,11 +9,14 @@ let usersControllers = {
     register:(req, res) => {
         res.render('users/register');
     },
-    create:(req, res) => {
-        return res.send({
-            body: req.body,
-            file: req.file
-        });
+    processRegister:(req, res) => {
+        const resultValidation= validationResult(req);
+        
+        if(resultValidation.errors.length > 0){
+            return res.render('users/register',{
+                errors: resultValidation.mapped()
+            });
+        }
     }
 }
 

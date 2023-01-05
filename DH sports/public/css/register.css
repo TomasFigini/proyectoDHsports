@@ -64,3 +64,7 @@ h4 {
 main {
     padding-top: 20px;
 }
+
+.text-danger{
+    color: red;
+}

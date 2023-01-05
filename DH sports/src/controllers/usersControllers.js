@@ -10,13 +10,16 @@ let usersControllers = {
         res.render('users/register');
     },
     processRegister:(req, res) => {
-        const resultValidation= validationResult(req);
-        
+        const resultValidation = validationResult(req);
+
         if(resultValidation.errors.length > 0){
-            return res.render('users/register',{
-                errors: resultValidation.mapped()
-            });
+            res.render('users/register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
         }
+
+        res.redirect('/index');
     }
 }
 

@@ -6,8 +6,10 @@ const bcryptjs = require('bcryptjs')
 
 let usersControllers = {
     register:(req, res) => {
+        res.cookie('testing', 'hola mundo', { maxAge: 1000 * 30});
         res.render('users/register');
     },
+
     processRegister:(req, res) => {
         const resultValidation = validationResult(req);
 
@@ -42,9 +44,11 @@ let usersControllers = {
         
         res.redirect('/users/login');
     },
+
     login:(req,res) => {
         res.render('users/login');
     },
+
     processLogin: (req, res) => {
         let userToLogin = User.findByField('email', req.body.email);
 
@@ -54,6 +58,11 @@ let usersControllers = {
                 delete userToLogin.password;
                 delete userToLogin.repitpassword;
                 req.session.userLogged = userToLogin;
+
+                if(req.body.rememberMe){
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2});
+                }
+
                 return res.redirect('profile')
             }
             return res.render('users/login', {
@@ -73,14 +82,17 @@ let usersControllers = {
             }
         })
     },
+
     profile:(req, res) => {
-        console.log(req.session.userLogged)
+        console.log(req.cookies.userEmail);
         res.render('users/profile', {
             user: req.session.userLogged
         });
     },
+
     logout:(req, res) => {
-        req.session.detroy;
+        res.clearCookie('userEmail');
+        req.session.destroy();
         return res.redirect('/')
     }
 }

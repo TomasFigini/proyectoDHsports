@@ -13,15 +13,15 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({ storage: storage });
 
-function fileUpload(req, res, next) {
-  uploadFile.single('avatar')(req, res, err => {
-    if (err instanceof multer.MulterError) {
-      return res.status(400).json({ error: err.message });
-    } else if (err) {
-      return res.status(400).json({ error: err.message });
-    }
-    next();
-  });
-}
+// function fileUpload(req, res, next) {
+//   uploadFile.single('avatar')(req, res, err => {
+//     if (err instanceof multer.MulterError) {
+//       return res.status(400).json({ error: err.message });
+//     } else if (err) {
+//       return res.status(400).json({ error: err.message });
+//     }
+//     next();
+//   });
+// }
 
-module.exports = fileUpload;
+module.exports = uploadFile;

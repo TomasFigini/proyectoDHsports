@@ -23,8 +23,11 @@ const uploadFile = multer({ storage: storage });
 const router = express.Router();
 
 router.get('/login', usersControllers.login);
+router.post('/login', usersControllers.processLogin);
 
 router.get('/register', usersControllers.register);
 router.post('/register',uploadFile.single('avatar'),validations, usersControllers.processRegister);
+
+router.get('/profile', usersControllers.profile)
 
 module.exports = router

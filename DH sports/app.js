@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path=require('path');
 const ejs = require('ejs');
+const session = require('express-session')
 const mainRouter= require('./src/routes/mainRouter');
 const productsRouter = require('./src/routes/productsRouter');
 const usersRouter = require('./src/routes/usersRouter');

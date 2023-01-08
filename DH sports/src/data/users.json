@@ -1,20 +1,20 @@
 [
-    {
-        "Identificador": 1,
-        "Nombre": "Lionel",
-        "Apellido": "Messi",
-        "Email": "LionelMessi@gmail.com",
-        "Contraseña": "lionelmessi",
-        "Categoría": "customer",
-        "Imagen": ""
-    },
-    {
-        "Identificador": 2,
-        "Nombre": "Lionel",
-        "Apellido": "Scaloni",
-        "Email": "Scaloneta@gmail.com",
-        "Contraseña": "scaloneta22",
-        "Categoría": "admin",
-        "Imagen": ""
-    } 
+ {
+  "id": 1,
+  "nombre": "Lionel",
+  "apellido": "Messi",
+  "email": "LionelMessi@gmail.com",
+  "contrasenia": "lionelmessi",
+  "categoria": "customer",
+  "avatar": ""
+ },
+ {
+  "id": 2,
+  "nombre": "Lionel",
+  "apellido": "Scaloni",
+  "email": "Scaloneta@gmail.com",
+  "contrasenia": "scaloneta22",
+  "categoria": "admin",
+  "avatar": ""
+ }
 ]

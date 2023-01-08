@@ -15,6 +15,15 @@ app.set('view engine','ejs');
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(session({
+    secret: 'secreto',
+    resave: false,
+    saveUninitialized: false,
+}))
+
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware')
+
+app.use(userLoggedMiddleware)
 
 app.listen(3000, ()=>{
     console.log('Server corriendo en el puerto 3000');

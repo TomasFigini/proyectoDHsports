@@ -4,16 +4,34 @@
     <%- include('../partials/head') %> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>login</title>
-    <link href="../css/login.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/index.css">
+    <link href="../css/profile.css" rel="stylesheet">
 </head>
 <body>  
     <header>
         <%- include('../partials/header') %> 
     </header>
     <main>
-        <h4>Perfil de usuario</h4>
-
+        <div class="saludo">
+            <h4>Hola <%= user.nombre + '!' %>  </h4>
+        </div>            
+        <body>
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <img src="/images/avatars/<%= user.avatar %>" alt="Foto de perfil de usuario">
+                </div>
+                <div class="user-fullname">
+                    <h4> <%= user.nombre + ' ' + user.apellido %>  </h4>
+                    <p class="user-data"> <%= user.id %> </p>
+                    <p class="user-data"> <%= user.email %> </p>
+                    <p class="user-data"> <%= user.dni %> </p>
+                    <p class="user-data"> <%= user.fecha %> </p>                    
+                </div>
+            </div>
+            <form action="/users/logout" method="GET">
+                <button type="submit">Cerrar Sesión</button>
+            </form>
+        </body>
     </main>    
     <footer class="footer">
         <%- include('../partials/footer') %> 

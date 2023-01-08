@@ -16,5 +16,16 @@
   "contrasenia": "scaloneta22",
   "categoria": "admin",
   "avatar": ""
+ },
+ {
+  "id": 3,
+  "nombre": " Nicolas",
+  "apellido": "Castiglioni",
+  "dni": "31227870",
+  "email": "nicolascastiglioni@gmail.com",
+  "fecha": "1985-07-06",
+  "password": "$2a$10$nLgWQJ2yU6h0RJp0JHjnvOCeJKPGvUtKZy2qGqQoqaofvpThc8.YO",
+  "repitpassword": "$2a$10$pGbNRtXVk0IPBOWa0AgTIeEkKCuFpOAy6PCGSxuRnvC/IYYAOwEIS",
+  "avatar": "20211230_173650.jpg"
  }
 ]

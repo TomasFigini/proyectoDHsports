@@ -1,0 +1,33 @@
+*{
+    font-family: 'roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #1C1C1F;
+    color: #E2E2DE;
+}
+
+.saludo {
+    color: #E2E2DE;
+    margin: 15px
+}
+
+.profile-info {
+    display: flex;
+    max-width: 90%;
+    width: 500px;
+    border: #E2E2DE solid;
+    border-radius: 10px;
+}
+
+.profile-avatar img {
+    width: 200px;
+    border: #1C1C1F solid;
+    border-radius: 10px;
+}
+ .user-fullname {
+    padding: 5px;
+ }
+

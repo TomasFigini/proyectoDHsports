@@ -51,6 +51,9 @@ let usersControllers = {
         if (userToLogin) {
             let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
             if (isOkPassword){
+                delete userToLogin.password;
+                delete userToLogin.repitpassword;
+                req.session.userLogged = userToLogin;
                 return res.redirect('profile')
             }
             return res.render('users/login', {
@@ -71,7 +74,14 @@ let usersControllers = {
         })
     },
     profile:(req, res) => {
-        res.render('users/profile');
+        console.log(req.session.userLogged)
+        res.render('users/profile', {
+            user: req.session.userLogged
+        });
+    },
+    logout:(req, res) => {
+        req.session.detroy;
+        return res.redirect('/')
     }
 }
 

@@ -14,6 +14,7 @@ let usersControllers = {
         const resultValidation = validationResult(req);
 
         if(resultValidation.errors.length > 0){
+            console.log(req.body)
             return res.render('users/register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
@@ -32,7 +33,7 @@ let usersControllers = {
                 oldData: req.body
             });
         }
-
+        
         let userToCreate = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),

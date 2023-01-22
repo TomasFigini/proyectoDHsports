@@ -105,3 +105,6 @@ main {
     color: yellow;
 }
 
+a:link{
+    color: gainsboro;
+}

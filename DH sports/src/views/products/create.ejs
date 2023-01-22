@@ -12,45 +12,87 @@
     </header>
 
     <form action="/" method="post" enctype="multipart/form-data">
-        <label class="label">
-            <input type="text" name="nombreProducto" placeholder="Nombre del producto" class="input">
-            <input type="text" name="precio" placeholder="Precio del producto" class="input">
 
-            <div class="categoria">
-                <details>
-                    <summary class="summary">
-                        Talle del producto
-                    </summary>
-                    <ul class="talle">
-                        <li><input type="radio" name="talle">XXL</li>
-                        <li><input type="radio" name="talle">XL</li>
-                        <li><input type="radio" name="talle">L</li>
-                        <li><input type="radio" name="talle">M</li>
-                        <li><input type="radio" name="talle">S</li>
-                        <li><input type="radio" name="talle">XS</li>
-                    </ul>
-                </details>
-            </div>
+        <div>
+            <label for=""></label>
+            <input type="text" name="nombreProducto" class="input" placeholder="Nombre del producto">
+        </div>
 
-            <div class="categoria">
-                <details>
-                    <summary class="summary">
-                        Tipo de producto
-                    </summary>
-                    <ul class="talle">
-                        <li><input type="radio" name="talle">Ropa</li>
-                        <li><input type="radio" name="talle">Zapatilla</li>
-                        <li><input type="radio" name="talle">Accesorio</li>
-                        <li><input type="radio" name="talle">Otro</li>
-                    </ul>
-                </details>
-            </div>
-            <div class="insert">
-                <label for="imagen" class="lab">Insertar imagen: </label>
-                <div><input type="file" nombre="archivo" id="imagen" class="inpimg"></div>
-            </div>
-            <div class="confirmar"><input type="submit" value="Confirmar" class="boton"></div>
-        </label>
+        <div>
+            <label for=""></label>
+            <input type="text" name="precio" class="input" placeholder="Precio">
+        </div>
+
+        <div>
+            <label for=""></label>
+            <input type="text" name="descuento" class="input" placeholder="Descuento">
+        </div>
+
+        <div>
+            <label for="brand" class="form-label">Marca:</label>
+            <select name="brand" id="brand" class="form-text">
+                <option value="Otra" selected disabled>Selec Marca</option>
+                <% fk[2].forEach((brand)=>{ %>
+                    <option value="<%= brand.id %>"><%= brand.marca %> </option>
+                <% }) %> 
+                
+            </select> 
+        </div>
+
+        <div>
+            <label for="categoria" class="form-label">Categoria:</label>
+            <select name="categoria" id="categoria" class="form-text">
+                <option value="otro" selected disabled>Selec Categoria</option>
+                <% fk[3].forEach((category)=>{ %>
+                    <option value="<%= category.id %>"><%= category.categoria %> </option>
+                <% }) %> 
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="categoria" class="form-label">Deporte:</label>
+            <select name="sport" id="categoria" class="form-text">
+                <option value="otro" selected disabled>Selec Deporte</option>
+                <% fk[1].forEach((sport)=>{ %>
+                    <option value="<%= sport.id %>"><%= sport.sport %> </option>
+                <% }) %> 
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="categoria" class="form-label">Talle:</label>
+            <select name="talle" id="categoria" class="form-text size">
+                <option value="" selected disabled >Talle</option>
+                <% fk[0].forEach((size)=>{ %>
+                    <option value="<%= size.id %>"><%= size.talle %> </option>
+                <% }) %> 
+                
+            </select>
+        </div>
+
+        <div>
+            <label for="color" class="form-label">Color:</label>
+            <select name="color" id="color" class="form-text size">
+                <option value="" selected disabled >Color</option>
+                <% fk[4].forEach((color)=>{ %>
+                    <option value="<%= color.id %>"><%= color.color %> </option>
+                <% }) %> 
+                
+            </select>
+        </div>
+
+        <div>
+            <label for=""></label>
+            <input type="text" name="descripcion" class="input" placeholder="Descripcion">
+        </div>
+
+        <div class="insert">
+            <label for="imagen" class="lab">Insertar imagen: </label>
+            <div><input type="file" nombre="archivo" id="imagen" class="inpimg"></div>
+        </div>
+        <div class="confirmar"><input type="submit" value="Confirmar" class="boton"></div>
 
     </form>
 

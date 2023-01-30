@@ -14,7 +14,7 @@ const productController = {
         })
             .then((p) => {
                 let products = p.filter((p => p.deleted == 0))
-                res.render("products", { products })
+                res.render("products/products", { products })
             })
 
     },
@@ -28,7 +28,7 @@ const productController = {
         })
             .then((p) => {
                 let products = p.filter((p => p.deleted == 0))
-                res.render("products", { products })
+                res.render("products/products", { products })
             })
             .catch((e) => res.send(e))
     },

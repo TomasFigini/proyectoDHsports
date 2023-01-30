@@ -16,11 +16,13 @@
     <main>
         <h4>Registrarme</h4>
         <div class="register-form">
+            <ul class="formErrors"></ul>
             <form action="/users/register" method="POST" enctype="multipart/form-data">                
                 <div class="Padre">                    
                     <div class="nombre"> 
                         <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" value="<%= locals.oldData ? oldData.nombre : null%> ">
+                        <!-- <input type="text" name="nombre" id="nombre" value="<%= locals.oldData ? oldData.nombre : null%>"> -->
+                        <input type="text" name="nombre" id="nombre">
                         <% if (locals.errors && errors.nombre) { %> 
                             <div class="text-danger">
                                 <%= errors.nombre.msg %> 
@@ -30,7 +32,8 @@
                     </div>                    
                     <div class="nombre">                        
                         <label for="apellido">Apellido</label>
-                        <input type="text" name="apellido" id="apellido" value="<%= locals.oldData ? oldData.apellido : null%> ">
+                        <!-- <input type="text" name="apellido" id="apellido" value="<%= locals.oldData ? oldData.apellido : null%> "> -->
+                        <input type="text" name="apellido" id="apellido">
                         <% if (locals.errors && errors.apellido) { %> 
                             <div class="text-danger">
                                 <%= errors.apellido.msg %> 
@@ -40,7 +43,8 @@
                     </div>                    
                     <div class="nombre">                        
                         <label for="dni">DNI</label>
-                        <input type="number" name="dni" id="dni" value="<%= locals.oldData ? oldData.dni : null%> ">
+                        <!-- <input type="number" name="dni" id="dni" value="<%= locals.oldData ? oldData.dni : null%> "> -->
+                        <input type="number" name="dni" id="dni">
                         <% if (locals.errors && errors.dni) { %> 
                             <div class="text-danger">
                                 <%= errors.dni.msg %> 
@@ -50,7 +54,8 @@
                     </div>                    
                     <div class="nombre">                       
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : null%> ">
+                        <!-- <input type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : null%> "> -->
+                        <input type="email" name="email" id="email">
                         <% if (locals.errors && errors.email) { %> 
                             <div class="text-danger">
                                 <%= errors.email.msg %> 
@@ -60,7 +65,8 @@
                     </div>                    
                     <div class="nombre">                        
                         <label for="fecha">Fecha de Nacimiento</label>
-                        <input type="date" name="fecha" style="text-align: center;" value="<%= locals.oldData ? oldData.fecha : null%> ">
+                        <!-- <input type="date" id="fecha_nac" name="fecha" style="text-align: center;" value="<%= locals.oldData ? oldData.fecha : null%> "> -->
+                        <input type="date" id="fecha_nac" name="fecha" style="text-align: center;">
                         <% if (locals.errors && errors.fecha) { %> 
                             <div class="text-danger">
                                 <%= errors.fecha.msg %> 
@@ -70,7 +76,8 @@
                     </div>                   
                     <div class="nombre">                        
                         <label for="password">Contraseña</label>
-                        <input type="password" name="password" value="<%= locals.oldData ? oldData.password : null%> ">
+                        <!-- <input type="password" id="password" name="password" autocomplete="on" value="<%= locals.oldData ? oldData.password : null%> "> -->
+                        <input type="password" id="password" name="password" autocomplete="on">
                         <% if (locals.errors && errors.password) { %> 
                             <div class="text-danger">
                                 <%= errors.password.msg %> 
@@ -80,7 +87,8 @@
                     </div>
                     <div class="nombre">                        
                         <label for="repitpassword">Repetir Contraseña</label>
-                        <input type="password" name="repitpassword" value="<%= locals.oldData ? oldData.repitpassword : null%> ">
+                        <!-- <input type="password" name="repitpassword" autocomplete="on" value="<%= locals.oldData ? oldData.repitpassword : null%> "> -->
+                        <input type="password" id="repitpassword" name="repitpassword" autocomplete="on">
                         <% if (locals.errors && errors.repitpassword) { %> 
                             <div class="text-danger">
                                 <%= errors.repitpassword.msg %> 
@@ -90,7 +98,7 @@
                     </div>
                     <div class="nombre">                        
                         <label for="avatar">Imagen de perfil</label>
-                        <input type="file" name="avatar">
+                        <input type="file" name="avatar" id="avatar">
                         <% if (locals.errors && errors.avatar) { %> 
                             <div class="text-danger">
                                 <%= errors.avatar.msg %> 
@@ -100,7 +108,7 @@
                     </div>    
                 </div>                
                 <div class="boton">                    
-                    <input type="submit" value="Crear mi cuenta">                   
+                    <input type="submit" value="Crear mi cuenta" id="submit">                   
                 </div>
                 <div class="link">
                     <a href="login">¿Ya estás registrado?</a>
@@ -111,5 +119,6 @@
         <footer class="footer">
         <%- include('../partials/footer') %> 
         </footer>
+        <script src="/js/register.js"></script>
     </body>
     </html>

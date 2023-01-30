@@ -66,5 +66,8 @@ main {
 }
 
 .text-danger{
-    color: yellow;
+    color:#842029;
+    background-color: #F8D7DA;
+    text-align: center;
+    border-radius: 10px;
 }

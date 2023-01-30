@@ -1,5 +1,5 @@
 const path = require('path');
-const { validationResult }= require('express-validator');
+const { validationResult } = require('express-validator');
 const User = require('../models/Users');
 
 const bcryptjs = require('bcryptjs')

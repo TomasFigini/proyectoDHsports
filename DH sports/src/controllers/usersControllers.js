@@ -2,9 +2,24 @@ const path = require('path');
 const { validationResult } = require('express-validator');
 const User = require('../models/Users');
 
-const bcryptjs = require('bcryptjs')
+
+const bcryptjs = require('bcryptjs');
+const { Sequelize } = require('../database/models');
+const db = require('../database/models');
 
 let usersControllers = {
+    index: (req, res) => {
+    console.log(req.cookies.userEmail);
+        db.User.findAll({
+            raw: true
+        })       
+        .then(users => {
+            let respuesta = {            
+                data: users
+            }
+            res.json(respuesta);
+        })
+    },
     register:(req, res) => {
         res.cookie('testing', 'hola mundo', { maxAge: 1000 * 30});
         res.render('users/register');

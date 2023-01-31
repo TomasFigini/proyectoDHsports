@@ -45,6 +45,9 @@ module.exports = (sequelize, dataTypes)=>{
         },
         deleted:{
             type:dataTypes.INTEGER
+        },
+        imagen: {
+            type: dataTypes.STRING
         }
     };
 

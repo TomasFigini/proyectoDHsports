@@ -12,6 +12,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 
 const router = express.Router();
 
+router.get('/', usersControllers.index)
 router.get('/login', guestMiddleware, usersControllers.login);
 router.post('/login', usersControllers.processLogin);
 

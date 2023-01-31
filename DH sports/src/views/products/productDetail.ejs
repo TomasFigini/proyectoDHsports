@@ -22,9 +22,15 @@
             </ul>
         </div>    
         <section class="articulo">
+            <div class="">
+                <form action="/products/<%= product.id %>/edit" method="GET">
+                    <button type="submit">Editar producto</button>
+                </form>
+            </div>
             <div class="container">
                 <ul class="slider">
-                    <li id="slide1"><img width='250px' src="/images/products/<%= product.image1 %>" alt="Camiseta seleccion Argentina"></li>
+    
+                    <li id="slide1"><img width='250px' src="/images/products/<%= product.imagen %>" alt="Camiseta seleccion Argentina"></li>
                     <li id="slide2"><img width='250px' src="/images/products/<%= product.image2 %>" alt="Camiseta seleccion p/ atras"></li>
                     <li id="slide3"><img width='250px' src="/images/products/<%= product.image3 %>" alt="Camiseta seleccion messi"></li>
                     <li id="slide4"><img width='250px' src="/images/products/<%= product.image4 %>" alt="Camiseta seleccion equipo"></li>

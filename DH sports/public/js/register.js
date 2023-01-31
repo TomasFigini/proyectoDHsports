@@ -27,7 +27,7 @@ window.addEventListener('load',function(){
       function validateImage(image){
         return (image.endsWith('.jpg') || image.endsWith('.jpeg') || image.endsWith('.png') ||image.endsWith('.gif')) 
       }
-
+    
     //Validaciones 
     form.addEventListener('submit', function(e){
         arrayErrores = [];

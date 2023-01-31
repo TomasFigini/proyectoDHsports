@@ -20,19 +20,23 @@
         <div class="start-icon"><i class="fa-solid fa-football fa-border fa-2xl" style="color:#A6695B;"></i></div>
         <div class="start-icon"><i class="fa-solid fa-baseball fa-border fa-2xl" style="color:#ABD904"></i></div>
     </div>
-
+    
     <main>
         <h2 class="titulo">Todos los productos</h2>
+        <div>
+            products:
+            <% products[0].id %> 
+        </div>
         <div class="articulos">
             <% products.forEach(product => { %>
                 <a href="./products/detail/<%= product.id %>">
                     <div class="contenedor-art">
-                        <img src="/images/<%= product.image1 %>" alt="Imagen de producto" width="250px" height="290px">
-                        <p class="nombre-art"><%= product.name %></p>
+                        <img src="/images/products/<%= product.imagen %>" alt="Imagen de producto" width="250px" height="290px">
+                        <p class="nombre-art"><%= product.nombre %></p>
                         <div class="descrip-art">
-                            <div class="precio">$<%= product.price %></div>
-                            <% if (product.discount > 0) { %> 
-                            <div class="descuento"><%= product.discount %>% OFF</div>
+                            <div class="precio">$<%= product.precio %></div>
+                            <% if (product.descuento > 0) { %> 
+                            <div class="descuento"><%= product.descuento %>% OFF</div>
                             <% } %> 
                             <span style="color: #f24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
                         </div>

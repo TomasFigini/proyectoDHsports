@@ -10,10 +10,15 @@ const productController = {
 
     index: function (req, res) {
         db.Product.findAll({
-            include: [{ association: "categoria" }]
-        })
+            include: [{ association: "categoria" }],
+            where: {
+                deleted: 0
+            },
+            raw: true
+            })
             .then((p) => {
                 let products = p.filter((p => p.deleted == 0))
+                console.log(products)
                 res.render("products/products", { products })
             })
 
@@ -36,7 +41,7 @@ const productController = {
     detail: function (req, res) {
         db.Product.findByPk(req.params.id,{
             include: [{ association: "talle" },
-        {association: "categoria"}]
+            {association: "categoria"}]
         })
             .then((product) => {
         

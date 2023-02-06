@@ -1,4 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `DhSports_db`;
+DROP DATABASE IF EXISTS `DhSports_db`;
+CREATE DATABASE `DhSports_db`;
 USE `DhSports_db`;
 
 
@@ -28,18 +29,19 @@ CREATE TABLE `brands` (
 );
 
 CREATE TABLE `products` (
-    `id` INT NOT NULL AUTO_INCREMENT,
-    `nombre` VARCHAR(50) NOT NULL,
-    `precio` INT,
-    `descuento` TINYINT,
-    `deporteId` INT,
-    `marcaId` INT,
-    `categoriaId` INT,
-    `talleId` INT,
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `nombre` VARCHAR(50) NOT NULL,
+   `precio` INT,
+   `descuento` TINYINT,
+   `deporteId` INT,
+   `marcaId` INT,
+   `categoriaId` INT,
+   `talleId` INT,
 	`colorId` INT,
-    `userId` INT,
+   `userId` INT,
 	`descripcion` TEXT NOT NULL,
-    `deleted` TINYINT NOT NULL,
+   `deleted` TINYINT NOT NULL,
+   `imagen` VARCHAR(50)
    PRIMARY KEY (`id`)
 );
 

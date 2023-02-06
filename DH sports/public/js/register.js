@@ -27,6 +27,19 @@ window.addEventListener('load',function(){
       function validateImage(image){
         return (image.endsWith('.jpg') || image.endsWith('.jpeg') || image.endsWith('.png') ||image.endsWith('.gif')) 
       }
+
+    //Función para validar password:
+    function validatePassword(pass){
+        let hasUppercase = false;
+        for(let i = 0; i < pass.length; i++){
+            if(pass[i].toUppercase() === pass[i]){
+                hasUppercase = true;
+                break;
+            }
+        }
+        return hasUppercase
+        
+    }
     
     //Validaciones 
     form.addEventListener('submit', function(e){
@@ -55,6 +68,10 @@ window.addEventListener('load',function(){
             arrayErrores.push('La contraseña debe tener al menos 8 caracteres');
             e.preventDefault();
         }
+        // if(!validatePassword(password.value)){
+        //     arrayErrores.push('La contraseña debe tener al menos 1 mayúscula');
+        //     e.preventDefault();
+        // }
         if(repitPassword.value == '' || repitPassword.value != password.value){
             arrayErrores.push('Las contraseñas no coinciden');
             e.preventDefault();

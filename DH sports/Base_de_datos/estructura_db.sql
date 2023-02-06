@@ -41,7 +41,7 @@ CREATE TABLE `products` (
    `userId` INT,
 	`descripcion` TEXT NOT NULL,
    `deleted` TINYINT NOT NULL,
-   `imagen` VARCHAR(50)
+   `imagen` VARCHAR(50),
    PRIMARY KEY (`id`)
 );
 

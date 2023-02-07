@@ -1,7 +1,6 @@
 const path = require('path');
-const { validationResult } = require('express-validator');
-
-const bcryptjs = require('bcryptjs');
+const { validationResult, cookie } = require('express-validator');
+const bcrypt = require('bcryptjs');
 
 const { Sequelize } = require('../database/models');
 const db = require('../database/models');
@@ -9,7 +8,6 @@ const Op = Sequelize.Op;
 
 let usersControllers = {
     index: (req, res) => {
-    console.log(req.cookies.userEmail);
         db.User.findAll({
             raw: true
         })       
@@ -20,6 +18,7 @@ let usersControllers = {
             res.json(respuesta);
         })
     },
+
     register:(req, res) => {
         res.cookie('testing', 'hola mundo', { maxAge: 1000 * 30});
         res.render('users/register');
@@ -33,36 +32,30 @@ let usersControllers = {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });            
-        }
-
-        let userInDb = db.User.findByField('email', req.body.email);
-        console.log(userInDb)
-        if (userInDb) {
-            return res.render('users/register', {
-                errors: {
-                    email: {
-                        msg: 'Este email ya está registrado'
+        }else{
+            db.User.findAll()
+                .then(user => {
+                    let chequeado = user.find(u => (u.email == req.body.email));
+                    if (!chequeado) {
+                        db.User.create({
+                            nombre: req.body.nombre,
+                            apellido: req.body.apellido,
+                            dni: req.body.dni,
+                            email: req.body.email,
+                            contraseña: bcrypt.hashSync(req.body.password, 10),
+                            avatar: req.file ? req.file.filename : "systemusers_94754.png",
+                            role:"",
+                            deleted: 0
+                        })
+                    res.render("users/profile");
+                    }else {
+                        res.render("register", {
+                            msg: "Ya existe un usuario registrado con esos datos",
+                            oldData: req.body
+                        })
                     }
-                },
-                oldData: req.body
-            });
+                })
         }
-        
-        let userToCreate = {
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            repitpassword: bcryptjs.hashSync(req.body.repitpassword, 10),
-            avatar: req.file.filename
-        }
-    
-        let userCreated = db.User.create(userToCreate) .then(user => {
-            console.log(user);
-            res.redirect('/users/login');
-        }).catch(error =>{
-            console.log(error)
-        })
-            
-        // res.redirect('/users/login');
     },
 
     login:(req,res) => {
@@ -70,41 +63,37 @@ let usersControllers = {
     },
 
     processLogin: (req, res) => {
-        let userToLogin = User.findByField('email', req.body.email);
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            db.User.findAll()
+                .then(user => {
+                    let busquedaEmail = user.find(u => u.email == req.body.email)
+                    if (busquedaEmail) {
+                        let comparacionPassword = bcrypt.compareSync(req.body.password, busquedaEmail.password)
+                        if (comparacionPassword) {
+                            delete busquedaEmail.password
+                            req.session.usuarioLogueado = busquedaEmail
+                            if (req.body.recordame != undefined) {
+                                res.cookie("recordame", busquedaEmail.email,
+                                    { maxAge: 6000 })
+                            }
+                            res.redirect("/products")
+                        } else { res.render("login", { passwordIncorrecto: "La contraseña es incorrecta" }) }
 
-        if (userToLogin) {
-            let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
-            if (isOkPassword){
-                delete userToLogin.password;
-                delete userToLogin.repitpassword;
-                req.session.userLogged = userToLogin;
+                    } else { res.render("login", { emailInvalido: "El email ingresado no se encuentra registrado" }) }
+                })
 
-                if(req.body.rememberMe){
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2});
-                }
+        } else {
 
-                return res.redirect('profile')
-            }
-            return res.render('users/login', {
-                errors: {
-                    email: {
-                        msg: 'Las credenciales son inválidas'
-                    }
-                }
+            return res.render("login", {
+                errors: errors.mapped(),
+                oldData: req.body
             })
         }
 
-        return res.render('users/login', {
-            errors: {
-                email: {
-                    msg: 'El email ingresado no se encuentra registrado'
-                }
-            }
-        })
     },
 
     profile:(req, res) => {
-        console.log(req.cookies.userEmail);
         res.render('users/profile', {
             user: req.session.userLogged
         });
@@ -117,4 +106,4 @@ let usersControllers = {
     }
 }
 
-module.exports = usersControllers
+module.exports = usersControllers;

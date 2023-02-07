@@ -1,11 +1,9 @@
 const express = require('express');
 const usersControllers = require('../controllers/usersControllers');
-const multer = require('multer');
-const path = require('path');
 const { check }= require('express-validator');
 
 //Middlewares de validaciones
-const uploadFile = require("../middlewares/avatar");
+const uploadFile = require("../middlewares/avatarMiddleware");
 const validations = require('../middlewares/validaciones');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');

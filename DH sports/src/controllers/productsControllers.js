@@ -72,13 +72,14 @@ const productController = {
             db.Product.create({
                 nombre: req.body.nombreProducto,
                 descripcion: req.body.descripcion,
-                avatar: req.file.archivo,
-                descuento: req.body.descuento,
+                imagen: req.file.filename,
+                descuento: req.body.descuento,  
                 precio: req.body.precio,
                 deporteId: req.body.sport,
                 marcaId: req.body.brand,
-                talleId: req.body.size,
-                categoriaId: req.body.category,
+                talleId: req.body.talle,
+                categoriaId: req.body.categoria,
+                colorId: req.body.color,
                 deleted: 0
             })
                 .then(() => {

@@ -76,7 +76,6 @@ const productController = {
                 descuento: req.body.descuento,
                 precio: req.body.precio,
                 deporteId: req.body.sport,
-                userId: req.session.usuarioLogueado.id,
                 marcaId: req.body.brand,
                 talleId: req.body.size,
                 categoriaId: req.body.category,
@@ -120,29 +119,33 @@ const productController = {
 
     },
 
-    update: function (req, res) {
+    update: async function(req, res) {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
+            let updateImage = req.file == undefined;
+            let imagenP = req.file?.filename;
+            if(updateImage){
+                const product = await db.Product.findByPk(req.params.id);
+                imagenP = product.imagen;
+            }
 
             db.Product.update({
-                name: req.body.name,
-                description: req.body.description,
-                image: req.file.filename,
-                discount: req.body.discount,
-                price: req.body.price,
-                sportId: req.body.sport,
-                userId: req.session.usuarioLogueado.id,
-                brandId: req.body.brand,
-                sizeId: req.body.size,
-                genre: req.body.genre,
-                categoryId: req.body.category,
+                nombre: req.body.name,
+                descripcion: req.body.description,
+                imagen: imagenP,
+                descuento: req.body.discount,
+                precio: req.body.price,
+                deporteId: req.body.sport,
+                marcaId: req.body.brand,
+                talleId: req.body.size,
+                categoriaId: req.body.category,
                 deleted: 0
             }, {
                 where: {
                     id: req.params.id
                 }
             })
-            res.redirect("/products/productDetail/" + req.params.id)
+            res.redirect("/products/detail/" + req.params.id)
         } else {
             let producto = db.Product.findByPk(req.params.id)
             let size = db.Size.findAll();

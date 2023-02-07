@@ -28,74 +28,33 @@
             <% products.forEach(product => {  %> 
             <a href="./products/detail/<%= product.id %>">
                 <div class="contenedor-art">
-                    <img width="250px" height="290px" src="images/products/<%= product.image1 %>">
-                    <p class="nombre-art"><%= product.name %></p>
+                    <img width="250px" height="290px" src="images/products/<%= product.imagen %>">
+                    <p class="nombre-art"><%= product.nombre %></p>
                     <div class="descrip-art">
-                        <div class="precio">$<%= product.price %></div>
-                        <% if (product.discount > 0) { %> 
-                            <div class="descuento"><%= product.discount %>% OFF</div>
+                        <div class="precio">$<%= product.precio %></div>
+                        <% if (product.descuento > 0) { %> 
+                            <div class="descuento"><%= product.descuento %>% OFF</div>
                         <% } %>                         
                         <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
                     </div>
                 </div>
             </a>
             <% }) %>         
-        </div>
-            
-        <h2 class="titulo">Visto recientemente</h2>
-        <button type="submit" class="ver-todo"><a href="./products" style="color: black;">Ver todo</a>  <i class="fa-solid fa-arrow-right"></i></button>
-        <div class="articulos">
-            <% products.filter(product => product.estado == "visto").forEach(product => { %> 
-                <a href="./products/detail/<%= product.id %>">    
-                    <div class="contenedor-art">
-                        <img width="250px" height="290px" src="images/products/<%= product.image1 %> ">
-                            <p class="nombre-art"><%= product.name %></p>
-                        <div class="descrip-art">
-                            <p class="precio"><%= product.price %> </p>
-                            <% if (product.discount > 0) { %> 
-                                <div class="descuento"><%= product.discount %>% OFF</div>
-                            <% } %>
-                            <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
-                        </div>
-                    </div>
-                </a>
-            <% }) %>        
-        </div>
-        
-        <h2 class="titulo">Novedades</h2>
-        <button type="submit" class="ver-todo"><a href="./products" style="color: black;">Ver todo</a>  <i class="fa-solid fa-arrow-right"></i></button>
-
-        <div class="articulos">
-            <% products.forEach(product => { %>
-                <a href="./products/detail/<%= product.id %>">
-                    <div class="contenedor-art">
-                        <img width="250px" height="290px" src="images/products/<%= product.image1 %>">
-                            <p class="nombre-art"><%= product.name %></p>
-                        <div class="descrip-art">
-                            <p class="precio"><%= product.price %></p>
-                            <% if (product.discount > 0) { %> 
-                                <div class="descuento"><%= product.discount %>% OFF</div>
-                            <% } %> 
-                            <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
-                        </div>
-                    </div>
-                </a>
-            <% }) %> 
         </div>  
 
         <h2 class="titulo">Ofertas</h2>
         <button type="submit" class="ver-todo"><a href="./products" style="color: black;">Ver todo</a>  <i class="fa-solid fa-arrow-right"></i></button>
 
         <div class="articulos">
-            <% products.filter(product => product.discount > 0).forEach(product => { %>
+            <% products.filter(product => product.descuento > 0).forEach(product => { %>
                 <a href="./products/detail/<%= product.id %>">
                     <div class="contenedor-art">
-                        <img width="250px" height="290px" src="images/products/<%= product.image1 %>">
-                            <p class="nombre-art"><%= product.name %></p>
+                        <img width="250px" height="290px" src="images/products/<%= product.imagen %>">
+                            <p class="nombre-art"><%= product.nombre %></p>
                         <div class="descrip-art">
-                            <p class="precio"><%= product.price %></p>
-                            <% if (product.discount > 0) { %> 
-                                <div class="descuento"><%= product.discount %>% OFF</div>
+                            <p class="precio"><%= product.precio %></p>
+                            <% if (product.descuento > 0) { %> 
+                                <div class="descuento"><%= product.descuento %>% OFF</div>
                             <% } %> 
                             <span style="color:#F24968;"><i class="fa-regular fa-heart fa-2xl"></i></span>
                         </div>

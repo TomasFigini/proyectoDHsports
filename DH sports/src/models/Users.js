@@ -6,7 +6,7 @@
 
 const fs = require('fs')
 
-const User = {
+const Usuario = {
     fileName: 'src/data/users.json',
     getData: function() {
         return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'))
@@ -50,4 +50,4 @@ const User = {
     }
 }
 
-module.exports = User;
+module.exports = Usuario;

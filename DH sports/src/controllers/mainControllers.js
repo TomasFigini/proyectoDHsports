@@ -1,13 +1,26 @@
 const fs = require('fs');
 const path = require('path');
+const { Sequelize } = require('../database/models');
 
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
+const db = require("../database/models");
+const Op = Sequelize.Op;
 
 let mainControllers = {
 
-    index:(req,res) => {
-        res.render('index', { products });
+    index: function (req, res) {
+        db.Product.findAll({
+            include: [{ association: "categoria" }],
+            where: {
+                deleted: 0
+            },
+            raw: true
+            })
+            .then((p) => {
+                let products = p.filter((p => p.deleted == 0))
+                console.log(products)
+                res.render("index", { products })
+            })
+
     },
 
     register:(req,res) => {

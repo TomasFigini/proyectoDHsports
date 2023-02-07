@@ -27,5 +27,28 @@
   "password": "$2a$10$nLgWQJ2yU6h0RJp0JHjnvOCeJKPGvUtKZy2qGqQoqaofvpThc8.YO",
   "repitpassword": "$2a$10$pGbNRtXVk0IPBOWa0AgTIeEkKCuFpOAy6PCGSxuRnvC/IYYAOwEIS",
   "avatar": "20211230_173650.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "user1",
+  "apellido": "prueba",
+  "dni": "12312312",
+  "email": "user1@gmail.com",
+  "fecha": "1241-12-12",
+  "password": "$2a$10$XBzalC/sgHfAvdZy/WmQ3O19uhJ1uPHEzsDrL/xL7IOa0F3WP5/cq",
+  "repitpassword": "$2a$10$IWq9joRLkhLUmFJxSQBHpuxjCCGi0dpmdcie.TrRENRp7h.lmWZEC",
+  "avatar": "1675728526567_img.jpg",
+  "role": "admin"
+ },
+ {
+  "id": 5,
+  "nombre": "user2",
+  "apellido": "prueba",
+  "dni": "1231231",
+  "email": "user2@gmail.com",
+  "fecha": "1233-12-12",
+  "password": "$2a$10$CMrPgAWFmIetpnZ2drb6JOBdldPW59ByQf5J.p5mvWWcsaBDZIhOq",
+  "repitpassword": "$2a$10$zJ3FmQbJhByGRbEYRQ/fSe9b8WjjwEKSMgfbuWs123Phey8h6fubO",
+  "avatar": "1675728874356_img.jpg"
  }
 ]

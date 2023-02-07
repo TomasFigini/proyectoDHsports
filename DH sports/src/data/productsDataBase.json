@@ -103,8 +103,8 @@
   "image3": "camiseta-suplente-imagen3.webp",
   "image4": "camiseta-suplente-imagen4.webp",
   "estado": "visto"
-    },
-    {        
+   },
+   {        
   "id": 8,
   "name": "Guantes Boxeo",
   "price": 10000,

@@ -21,9 +21,6 @@ module.exports = (sequelize, dataTypes)=>{
         contraseña: {
             type: dataTypes.STRING,
         },
-        categoria: {
-            type: dataTypes.STRING,
-        },
         avatar: {
             type: dataTypes.STRING,
         },

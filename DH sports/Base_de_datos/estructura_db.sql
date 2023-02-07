@@ -9,7 +9,6 @@ CREATE TABLE `users` (
    `apellido` VARCHAR(50) NOT NULL,
    `email` VARCHAR(50) NOT NULL,
    `contraseña` VARCHAR(255) NOT NULL,
-   `categoria` VARCHAR(50) NOT NULL,
    `avatar` VARCHAR(255) NOT NULL,
    `role` VARCHAR(50) NOT NULL,
    `deleted` TINYINT NOT NULL,

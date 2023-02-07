@@ -1,11 +1,11 @@
 const path = require('path');
 const { validationResult } = require('express-validator');
-const User = require('../models/Users');
-
 
 const bcryptjs = require('bcryptjs');
+
 const { Sequelize } = require('../database/models');
 const db = require('../database/models');
+const Op = Sequelize.Op;
 
 let usersControllers = {
     index: (req, res) => {
@@ -29,15 +29,14 @@ let usersControllers = {
         const resultValidation = validationResult(req);
 
         if(resultValidation.errors.length > 0){
-            console.log(req.body)
             return res.render('users/register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });            
         }
 
-        let userInDb = User.findByField('email', req.body.email);
-        
+        let userInDb = db.User.findByField('email', req.body.email);
+        console.log(userInDb)
         if (userInDb) {
             return res.render('users/register', {
                 errors: {
@@ -55,10 +54,15 @@ let usersControllers = {
             repitpassword: bcryptjs.hashSync(req.body.repitpassword, 10),
             avatar: req.file.filename
         }
-
-        let userCreated = User.create(userToCreate);
-        
-        res.redirect('/users/login');
+    
+        let userCreated = db.User.create(userToCreate) .then(user => {
+            console.log(user);
+            res.redirect('/users/login');
+        }).catch(error =>{
+            console.log(error)
+        })
+            
+        // res.redirect('/users/login');
     },
 
     login:(req,res) => {

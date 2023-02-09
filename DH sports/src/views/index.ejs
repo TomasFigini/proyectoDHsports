@@ -4,14 +4,36 @@
     <%- include('./partials/head') %> 
     <title>DH Sports</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/carousel.js" defer></script>
 </head>
 
 <body>
     <header>
         <%- include('./partials/header') %>
-    </header>   
+    </header>
 
-    <img class="banner" width="100%" src="images/Campeon.jpg">
+    <section aria-label="Newest Photos">
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#8678;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#8680;</button>
+
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img src="images/Campeon1.jpg" alt="Campeones #1">
+                </li>
+                <li class="slide">
+                    <img src="images/Campeon2.jpg" alt="Campeones #2">
+                </li>
+                <li class="slide">
+                    <img src="images/Campeon3.jpg" alt="Campeones #3">
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+    <!-- <img class="banner" width="100%" src="images/Campeon.jpg"> -->
 
     <div class="categorias">
         <div class="start-icon"><i class="fa-solid fa-futbol fa-border fa-2xl"></i></div>

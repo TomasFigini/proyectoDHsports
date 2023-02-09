@@ -13,7 +13,7 @@
         <%- include('../partials/header') %>
     </header>
     <main>
-        <form action="/products/<%= producto.id %>/edit" method="POST" enctype="multipart/form-data" class="form-container">
+        <form action="/products/<%= producto.id %>/edit" method="post" enctype="multipart/form-data">
             
             <div class="nombre">
                 <label for="">
@@ -44,6 +44,7 @@
                         <% } %>
                     </select>    
                 </div>
+
                 <div class="">
                     <label for="categoria" class="">Categoria:</label>
                     <select name="category" id="categoria" class="form-text" >
@@ -59,6 +60,7 @@
                         <option value="otro">Otro</option>
                     </select>    
                 </div>
+
                 <div class="">
                     <label for="sport" class="">Deporte:</label>
                     <select name="sport" id="sport" class="form-text" >
@@ -73,6 +75,7 @@
                         <option value="otro">Otro</option>
                     </select>    
                 </div>
+
                 <div class="">
                     <label for="brand" class="">Marca:</label>
                     <select name="brand" id="brand" class="form-text" >
@@ -87,15 +90,7 @@
                         <option value="otro">Otro</option>
                     </select>    
                 </div>
-                <!-- <div class="">
-                    <label for="genre" class="">Genero:</label>
-                    <select name="genre" id="genre" class="form-text">
-                        <option value="Hombre" >Hombre</option>
-                        <option value="Mujer" >Mujer</option>
-                        <option value="Niño" >Niño</option>
-                        <option value="Niña" >Niña</option>
-                    </select>    
-                </div> -->
+        
                 <div class="">
                     <label for="size" class="">Talle:</label>
                     <select name="size" id="size" class="form-text">
@@ -117,8 +112,8 @@
                 <input type="text" id="precio" name="price" value="<%= producto.precio %>">
             </div>
     
-            <div class="">
-                <input type="file" name="imagenProducto" class="" value="<%= producto.imgen %>">
+            <div>
+                <input type="file" name="archivo" value="<%= producto.imagen %>">
                 <div class="errorImage validacionesFront"></div>
                 <% if(locals.errors && errors.imagenProducto){ %>
                     <div class="error">

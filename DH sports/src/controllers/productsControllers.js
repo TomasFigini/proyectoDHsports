@@ -120,20 +120,14 @@ const productController = {
 
     },
 
-    update: async function(req, res) {
+    update: function(req, res) {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            let updateImage = req.file == undefined;
-            let imagenP = req.file?.filename;
-            if(updateImage){
-                const product = await db.Product.findByPk(req.params.id);
-                imagenP = product.imagen;
-            }
 
             db.Product.update({
                 nombre: req.body.name,
                 descripcion: req.body.description,
-                imagen: imagenP,
+                imagen: req.file.filename,
                 descuento: req.body.discount,
                 precio: req.body.price,
                 deporteId: req.body.sport,

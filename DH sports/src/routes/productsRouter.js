@@ -15,7 +15,7 @@ router.get('/create', productsControllers.create);
 router.post('/', uploadFile.single('archivo'), productsControllers.store);
 
 router.get('/:id/edit', productsControllers.edit);
-router.post('/:id/edit', productsControllers.update);
+router.post('/:id/edit', uploadFile.single('archivo'), productsControllers.update);
 
 // router.get('/delete/:id', productsControllers.delete);
 router.delete('/:id', productsControllers.destroy);

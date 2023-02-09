@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/productDetail.css">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">    
+    <script src="js/carousel.js" defer></script>
     <title>Todos los productos</title>
 </head>
 
@@ -13,7 +14,24 @@
     <header>
         <%- include('../partials/header') %>
     </header>
-    <img src="/images/banner.jpg" alt="banner" class="banner" width="100%">
+
+    <section aria-label="Newest Photos">
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#8678;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#8680;</button>
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img src="images/Campeon1.jpg" alt="Campeones #1">
+                </li>
+                <li class="slide">
+                    <img src="images/Campeon2.jpg" alt="Campeones #2">
+                </li>
+                <li class="slide">
+                    <img src="images/Campeon3.jpg" alt="Campeones #3">
+                </li>
+            </ul>
+        </div>
+    </section>
     
     <div class="categorias">
         <div class="start-icon"><i class="fa-solid fa-futbol fa-border fa-2xl"></i></div>
@@ -25,7 +43,6 @@
     <main>
         <h2 class="titulo">Todos los productos</h2>
         <div>
-            products:
             <% products[0].id %> 
         </div>
         <div class="articulos">

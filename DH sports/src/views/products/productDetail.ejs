@@ -5,6 +5,7 @@
         
     <link rel="stylesheet" href="/css/index.css"> 
     <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Detalle de producto</title>
 </head>
 <body>
@@ -22,24 +23,12 @@
             </ul>
         </div>    
         <section class="articulo">
-            <div class="">
-                <form action="/products/<%= product.id %>/edit" method="GET">
-                    <button type="submit">Editar producto</button>
-                </form>
-            </div>
+        
+            <a href="/products/<%= product.id %>/edit"><button type="submit">Editar producto</button></a>
+            
             <div class="container">
                 <ul class="slider">
-    
                     <li id="slide1"><img width='250px' src="/images/products/<%= product.imagen %>" alt="Camiseta seleccion Argentina"></li>
-                    <!-- <li id="slide2"><img width='250px' src="/images/products/<%= product.image2 %>" alt="Camiseta seleccion p/ atras"></li>
-                    <li id="slide3"><img width='250px' src="/images/products/<%= product.image3 %>" alt="Camiseta seleccion messi"></li>
-                    <li id="slide4"><img width='250px' src="/images/products/<%= product.image4 %>" alt="Camiseta seleccion equipo"></li> -->
-                </ul>
-                <ul class="menu-slider">
-                    <li><a href="#slide1"><i class="fa-solid fa-circle-dot"></i></a></li>
-                    <li><a href="#slide2"><i class="fa-solid fa-circle-dot"></i></a></li>
-                    <li><a href="#slide3"><i class="fa-solid fa-circle-dot"></i></a></li>
-                    <li><a href="#slide4"><i class="fa-solid fa-circle-dot"></i></a></li>
                 </ul>
             </div>
         <section class="product-data">
@@ -69,8 +58,7 @@
                                 <b>AGREGAR AL CARRITO</b>
                                 <i class="fa-solid fa-cart-shopping fa-2xl"></i>
                             </button>
-                        </div>        
-                        <p class="sku">Id Producto: <%= product.id %></p>
+                        </div>
                     </section>
                     <section class="description-container">
                             <details class="descripcion">

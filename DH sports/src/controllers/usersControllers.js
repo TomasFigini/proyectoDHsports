@@ -1,12 +1,13 @@
 const path = require('path');
 const { validationResult, cookie } = require('express-validator');
 const bcrypt = require('bcryptjs');
+const session = require("express-session");
 
 const { Sequelize } = require('../database/models');
 const db = require('../database/models');
 const Op = Sequelize.Op;
 
-let usersControllers = {
+const usersControllers = {
     index: (req, res) => {
         db.User.findAll({
             raw: true

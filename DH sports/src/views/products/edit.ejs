@@ -5,7 +5,6 @@
     <title>Editor Producto</title>
     <link rel="stylesheet" href="/css/editorProducto.css">
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
@@ -15,104 +14,116 @@
     <main>
         <form action="/products/<%= producto.id %>/edit" method="post" enctype="multipart/form-data">
             
-            <div class="nombre">
-                <label for="">
-                    <input type="text" name="name" value="<%= producto.nombre %>">
+            <div>
+                <div class="sub-label"><label>Nombre del producto:</label></div>
+                    <input type="text" name="name" class="input" value="<%= producto.nombre %>">
                     <% if(locals.errors && errors.nombre){ %>
                         <div class="error">
                             <%= errors.nombre.msg %> 
                         </div>
                     <% } %>
-                </label>
             </div>
 
             <div class="nombre">
-                <input type="text" rows="5" value="<%=producto.descripcion%>" name="description">
+                <div class="sub-label"><label>Precio:</label></div>
+                <input type="text" id="precio" name="price" class="input" value="<%= producto.precio %>">
+            </div>
+
+            <div>
+                <div class="sub-label"><label>Descripcion:</label></div>
+                <input type="text" rows="5" value="<%=producto.descripcion%>" class="input" name="description">
                 <div class="errorDescripcion validacionesFront"></div>
                 <% if(locals.errors && errors.descripcion){ %>
                     <div class="error">
                         <%= errors.descripcion.msg %> 
                     </div>
                 <% } %>
-                <div class="input">
-                    <label for="discount" class="">Descuento</label>
-                    <select name="discount" id="discount" class="form-text">
-                        <option value="0" selected >Sin descuento</option>
-                        <% for (let i = 0; i < 17; i++) { %>
-                            <% let desc = i * 5 %> 
-                            <option value="<%= desc %>"><%= desc %>% </option>
-                        <% } %>
-                    </select>    
-                </div>
+            </div>
 
-                <div class="">
-                    <label for="categoria" class="">Categoria:</label>
-                    <select name="category" id="categoria" class="form-text" >
-                        <option value="" disabled>Selec Categoria</option>
-                        <% for(let i=0; i < category.length; i++){%>
-                           <% if(category[i].id == producto.categoriaId){ %> 
-                         <option value="<%= category[i].id %>" selected><%= category[i].categoria %></option>
-                           <% } else { %>
-                             <option value="<%= category[i].id %> "><%= category[i].categoria %> </option>
-                             
-                           <%  } %>
-                        <% }  %>
-                        <option value="otro">Otro</option>
-                    </select>    
-                </div>
+            <div class="categoria">
+                <label for="discount" class="">Descuento</label>
+                <select name="discount" id="discount" class="form-text">
+                    <option value="0" selected >Sin descuento</option>
+                    <% for (let i = 0; i < 17; i++) { %>
+                        <% let desc = i * 5 %> 
+                        <option value="<%= desc %>"><%= desc %>% </option>
+                    <% } %>
+                </select>    
+            </div>
 
-                <div class="">
-                    <label for="sport" class="">Deporte:</label>
-                    <select name="sport" id="sport" class="form-text" >
-                       <% for(let i=0; i < sport.length; i++){%>
-                          <% if(sport[i].id == producto.sportId){ %> 
-                        <option value="<%= sport[i].id %>" selected><%= sport[i].sport %></option>
-                          <% } else { %>
-                            <option value="<%= sport[i].id %> "><%= sport[i].sport %> </option>
-                            
-                          <%  } %>
-                       <% }  %>    
-                        <option value="otro">Otro</option>
-                    </select>    
-                </div>
-
-                <div class="">
-                    <label for="brand" class="">Marca:</label>
-                    <select name="brand" id="brand" class="form-text" >
-                       <% for(let i=0; i < brand.length; i++){%>
-                          <% if(brand[i].id == producto.marcaId){ %> 
-                        <option value="<%= brand[i].id %>" selected><%= brand[i].marca %></option>
-                          <% } else { %>
-                            <option value="<%= brand[i].id %> "><%= brand[i].marca %> </option>
-                            
-                          <%  } %>
-                       <% }  %>    
-                        <option value="otro">Otro</option>
-                    </select>    
-                </div>
-        
-                <div class="">
-                    <label for="size" class="">Talle:</label>
-                    <select name="size" id="size" class="form-text">
-                        <option value="" disabled >Talle</option>
-                        <% for(let i=0; i < size.length; i++){%>
-                            <% if(size[i].id == producto.talleId){ %> 
-                          <option value="<%= size[i].id %>" selected><%= size[i].talle %></option>
-                            <% } else { %>
-                              <option value="<%= size[i].id %> "><%= size[i].talle %> </option>
-                              
-                            <%  } %>
-                         <% }  %> 
+            <div class="categoria">
+                <label for="categoria" class="">Categoria:</label>
+                <select name="category" id="categoria">
+                    <option value="" disabled>Selec Categoria</option>
+                    <% for(let i=0; i < category.length; i++){%>
+                    <% if(category[i].id == producto.categoriaId){ %> 
+                    <option value="<%= category[i].id %>" selected><%= category[i].categoria %></option>
+                    <% } else { %>
+                        <option value="<%= category[i].id %> "><%= category[i].categoria %> </option>
                         
-                    </select>    
-                </div> 
-    
-    
-            <div class="nombre">
-                <input type="text" id="precio" name="price" value="<%= producto.precio %>">
+                    <%  } %>
+                    <% }  %>
+                </select>    
+            </div>
+
+            <div class="categoria">
+                <label for="sport" class="">Deporte:</label>
+                <select name="sport" id="sport">
+                    <% for(let i=0; i < sport.length; i++){%>
+                        <% if(sport[i].id == producto.sportId){ %> 
+                    <option value="<%= sport[i].id %>" selected><%= sport[i].sport %></option>
+                        <% } else { %>
+                        <option value="<%= sport[i].id %> "><%= sport[i].sport %> </option>
+                        
+                        <%  } %>
+                    <% }  %>    
+                </select>    
+            </div>
+
+            <div class="categoria">
+                <label for="brand" class="">Marca:</label>
+                <select name="brand" id="brand">
+                    <% for(let i=0; i < brand.length; i++){%>
+                        <% if(brand[i].id == producto.marcaId){ %> 
+                    <option value="<%= brand[i].id %>" selected><%= brand[i].marca %></option>
+                        <% } else { %>
+                        <option value="<%= brand[i].id %> "><%= brand[i].marca %> </option>
+                        
+                        <%  } %>
+                    <% }  %>    
+                </select>    
+            </div>
+        
+            <div class="categoria">
+                <label for="size" class="">Talle:</label>
+                <select name="size" id="size">
+                    <option value="" disabled >Talle</option>
+                    <% for(let i=0; i < size.length; i++){%>
+                        <% if(size[i].id == producto.talleId){ %> 
+                        <option value="<%= size[i].id %>" selected><%= size[i].talle %></option>
+                        <% } else { %>
+                            <option value="<%= size[i].id %> "><%= size[i].talle %> </option>
+                            
+                        <%  } %>
+                        <% }  %> 
+                </select>    
+            </div>
+
+            <div class="categoria">
+                <label for="color" class="">Color:</label>
+                <select name="color" id="color">
+                    <% for(let i=0; i < color.length; i++){%>
+                        <% if(color[i].id == producto.colorId){ %> 
+                    <option value="<%= color[i].id %>" selected><%= color[i].color %></option>
+                        <% } else { %>
+                        <option value="<%= color[i].id %> "><%= color[i].color %> </option>
+                        
+                        <%  } %>
+                    <% }  %>    
+                </select>    
             </div>
     
-            <div>
+            <div class="categoria">
                 <input type="file" name="archivo" value="<%= producto.imagen %>">
                 <div class="errorImage validacionesFront"></div>
                 <% if(locals.errors && errors.imagenProducto){ %>
@@ -122,15 +133,8 @@
                 <% } %>
             </div>
 
-            <div class="confirmar"><input type="submit" value="Confirmar"></div>
-            <div>
-                <button type="reset">Cancelar cambios</button>
-            </div>
-            <div>
-                <form action="/" method="GET"></form>
-                <button type="submit">Volver</button>
-            </div>
-    
+            <div><input type="submit" value="Confirmar" class="boton"></div>
+            <div><button type="reset" class="boton-reset">Cancelar cambios</button></div>
         </form>
     </main>
 

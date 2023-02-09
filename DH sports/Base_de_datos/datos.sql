@@ -20,7 +20,9 @@ INSERT INTO `dhsports_db`.`sizes` (`id`, `talle`) VALUES (17, '41');
 INSERT INTO `dhsports_db`.`sizes` (`id`, `talle`) VALUES (18, '42');
 INSERT INTO `dhsports_db`.`sizes` (`id`, `talle`) VALUES (19, '43');
 INSERT INTO `dhsports_db`.`sizes` (`id`, `talle`) VALUES (20, '44');
-INSERT INTO `dhsports_db`.`sizes` (`id`, `talle`) VALUES (21, '45'); 
+INSERT INTO `dhsports_db`.`sizes` (`id`, `talle`) VALUES (21, '45');
+INSERT INTO `dhsports_db`.`sizes` (`id`, `talle`) VALUES (22,'Otro');
+
 
 /* BRANDS */
 
@@ -29,6 +31,7 @@ INSERT INTO `dhsports_db`.`brands` (`id`,`marca`) VALUES (2,'Nike');
 INSERT INTO `dhsports_db`.`brands` (`id`,`marca`) VALUES (3,'Everlast');
 INSERT INTO `dhsports_db`.`brands` (`id`,`marca`) VALUES (4,'Umbro');
 INSERT INTO `dhsports_db`.`brands` (`id`,`marca`) VALUES (5,'Puma');
+INSERT INTO `dhsports_db`.`brands` (`id`,`marca`) VALUES (6,'Otra');
 
 
 /* CATEGORIES */
@@ -44,6 +47,8 @@ INSERT INTO `dhsports_db`.`sports` (`id`, `sport`) VALUES (1, 'Básquet');
 INSERT INTO `dhsports_db`.`sports` (`id`, `sport`) VALUES (2, 'Fútbol');
 INSERT INTO `dhsports_db`.`sports` (`id`, `sport`) VALUES (3, 'Boxeo');
 INSERT INTO `dhsports_db`.`sports` (`id`, `sport`) VALUES (4, 'Hockey');
+INSERT INTO `dhsports_db`.`sports` (`id`, `sport`) VALUES (5, 'Otro');
+
 
 /* COLORS */
 INSERT INTO `dhsports_db`.`colors` (`id`, `color`) VALUES (1, 'Rojo');
@@ -51,6 +56,7 @@ INSERT INTO `dhsports_db`.`colors` (`id`, `color`) VALUES (2, 'Negro');
 INSERT INTO `dhsports_db`.`colors` (`id`, `color`) VALUES (3, 'Verde');
 INSERT INTO `dhsports_db`.`colors` (`id`, `color`) VALUES (4, 'Azul');
 INSERT INTO `dhsports_db`.`colors` (`id`, `color`) VALUES (5, 'Blanco');
+INSERT INTO `dhsports_db`.`colors` (`id`, `color`) VALUES (6, 'Otro');
 
 /* USERS */
 

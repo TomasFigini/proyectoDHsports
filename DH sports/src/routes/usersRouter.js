@@ -4,13 +4,14 @@ const { check }= require('express-validator');
 
 //Middlewares de validaciones
 const uploadFile = require("../middlewares/avatarMiddleware");
-const validations = require('../middlewares/validaciones');
+const validations = require('../middlewares/validacionesMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 const router = express.Router();
 
-router.get('/', usersControllers.index)
+router.get('/', usersControllers.index);
+
 router.get('/login', guestMiddleware, usersControllers.login);
 router.post('/login', usersControllers.processLogin);
 

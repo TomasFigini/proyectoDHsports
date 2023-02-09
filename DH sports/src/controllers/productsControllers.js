@@ -113,9 +113,10 @@ const productController = {
         let sport = db.Sport.findAll();
         let brand = db.Brand.findAll();
         let category = db.Category.findAll();
-        Promise.all([producto, size, sport, brand, category])
-            .then(([producto, size, sport, brand, category]) => {
-                res.render("products/edit", { producto: producto, size: size, sport: sport, brand: brand, category: category })
+        let color = db.Color.findAll();
+        Promise.all([producto, size, sport, brand, category, color])
+            .then(([producto, size, sport, brand, category, color]) => {
+                res.render("products/edit", { producto: producto, size: size, sport: sport, brand: brand, category: category, color:color })
             })
 
     },
@@ -130,6 +131,7 @@ const productController = {
                 imagen: req.file.filename,
                 descuento: req.body.discount,
                 precio: req.body.price,
+                colorId: req.body.color,
                 deporteId: req.body.sport,
                 marcaId: req.body.brand,
                 talleId: req.body.size,

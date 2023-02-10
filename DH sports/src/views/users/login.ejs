@@ -7,16 +7,20 @@
     <link href="../css/login.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/index.css">
 </head>
+
 <body>  
     <header>
         <%- include('../partials/header') %> 
     </header>
+
     <main>
         <h4>Iniciar Sesión</h4>
         <div class="login-form">
             <ul class="formErrors"></ul>
-            <form action="/users/login" method="POST" enctype="application/x-www-form-urlencoded">                
-                <div class="Padre">  
+
+            <form action="/users/login" method="POST">                
+                <div class="Padre"> 
+                     
                     <div class="nombre">                        
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" required> 
@@ -25,7 +29,8 @@
                                 <%= errors.email.msg %> 
                             </div>
                         <% } %>                       
-                    </div>                    
+                    </div>   
+
                     <div class="nombre">                        
                         <label for="password">Contraseña</label>
                         <input type="password" name="password" id="password" required autocomplete="on">                         
@@ -45,10 +50,11 @@
                 
             </form>
         </div> 
-    </main>    
+    </main>
+
     <footer class="footer">
         <%- include('../partials/footer') %> 
     </footer>
-    <!-- <script src="/js/login.js"></script> -->
+    <script src="/js/login.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@ const productsControllers = require('../controllers/productsControllers');
 
 //Middlewares
 const uploadFile = require("../middlewares/productImageMiddleware");
-
+const authMiddleware = require('../middlewares/authMiddleware');
 
 router.get("/search", productsControllers.search); 
 
@@ -14,7 +14,7 @@ router.get('/detail/:id', productsControllers.detail);
 router.get('/create', productsControllers.create);
 router.post('/', uploadFile.single('archivo'), productsControllers.store);
 
-router.get('/:id/edit', productsControllers.edit);
+router.get('/:id/edit',authMiddleware, productsControllers.edit);
 router.post('/:id/edit', uploadFile.single('archivo'), productsControllers.update);
 
 // router.get('/delete/:id', productsControllers.delete);

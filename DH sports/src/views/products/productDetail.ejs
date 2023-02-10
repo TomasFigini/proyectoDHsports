@@ -23,9 +23,9 @@
             </ul>
         </div>    
         <section class="articulo">
-        
-            <a href="/products/<%= product.id %>/edit"><button type="submit">Editar producto</button></a>
-            
+            <% if(userLogged.role=='Admin'){%>
+                <a href="/products/<%= product.id %>/edit"><button type="submit">Editar producto</button></a>
+            <% } %>
             <div class="container">
                 <ul class="slider">
                     <li id="slide1"><img width='250px' src="/images/products/<%= product.imagen %>" alt="Camiseta seleccion Argentina"></li>

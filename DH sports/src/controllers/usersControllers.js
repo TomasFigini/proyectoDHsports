@@ -8,16 +8,38 @@ const db = require('../database/models');
 const Op = Sequelize.Op;
 
 const usersControllers = {
-    index: (req, res) => {
-        db.User.findAll({
-            raw: true
-        })       
-        .then(users => {
-            let respuesta = {            
-                data: users
-            }
-            res.json(respuesta);
-        })
+
+    login:(req,res) => {
+        res.render('users/login');
+    },
+
+    processLogin: (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            db.User.findAll()
+                .then(user => {
+                    let busquedaEmail = user.find(u => u.email == req.body.email)
+                    if (busquedaEmail) {
+                        let comparacionPassword = bcrypt.compareSync(req.body.password, busquedaEmail.contraseña)
+                        if (comparacionPassword) {
+                            delete busquedaEmail.contraseña
+                            req.session.userLogged = busquedaEmail
+                            if (req.body.rememberMe != undefined) {
+                                res.cookie("recordame", busquedaEmail.email,
+                                    { maxAge: 6000 })
+                            }
+                            res.redirect("profile")
+                        } else { res.render('./users/login', { passwordIncorrecto:[{msg:"La contraseña es incorrecta" }]}) }
+                    } else { res.render("./users/login", { emailInvalido:[{msg: "El email ingresado no se encuentra registrado"}] }) }
+                })
+        } else {
+
+            return res.render("/login", {
+                errors: errors.mapped(),
+                oldData: req.body
+            })
+        }
+
     },
 
     register:(req, res) => {
@@ -48,7 +70,7 @@ const usersControllers = {
                             role:"",
                             deleted: 0
                         })
-                    res.render("users/profile");
+                    res.render("./users/profile");
                     }else {
                         res.render("register", {
                             msg: "Ya existe un usuario registrado con esos datos",
@@ -59,43 +81,8 @@ const usersControllers = {
         }
     },
 
-    login:(req,res) => {
-        res.render('users/login');
-    },
-
-    processLogin: (req, res) => {
-        let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            db.User.findAll()
-                .then(user => {
-                    let busquedaEmail = user.find(u => u.email == req.body.email)
-                    if (busquedaEmail) {
-                        let comparacionPassword = bcrypt.compareSync(req.body.password, busquedaEmail.password)
-                        if (comparacionPassword) {
-                            delete busquedaEmail.password
-                            req.session.usuarioLogueado = busquedaEmail
-                            if (req.body.recordame != undefined) {
-                                res.cookie("recordame", busquedaEmail.email,
-                                    { maxAge: 6000 })
-                            }
-                            res.redirect("/products")
-                        } else { res.render("login", { passwordIncorrecto: "La contraseña es incorrecta" }) }
-
-                    } else { res.render("login", { emailInvalido: "El email ingresado no se encuentra registrado" }) }
-                })
-
-        } else {
-
-            return res.render("login", {
-                errors: errors.mapped(),
-                oldData: req.body
-            })
-        }
-
-    },
-
     profile:(req, res) => {
-        res.render('users/profile', {
+        res.render('./users/profile', {
             user: req.session.userLogged
         });
     },

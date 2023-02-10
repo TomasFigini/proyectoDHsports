@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>login</title>
     <link rel="stylesheet" href="../css/index.css">
-    <link href="../css/profile.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/profile.css">
 </head>
 <body>  
     <header>
@@ -23,13 +23,11 @@
                 <div class="user-fullname">
                     <h4> <%= user.nombre + ' ' + user.apellido %>  </h4>
                     <p class="user-data"> <%= user.id %> </p>
-                    <p class="user-data"> <%= user.email %> </p>
-                    <p class="user-data"> <%= user.dni %> </p>
-                    <p class="user-data"> <%= user.fecha %> </p>                    
+                    <p class="user-data"> <%= user.email %> </p>                  
                 </div>
             </div>
             <form action="/users/logout" method="GET">
-                <button type="submit">Cerrar Sesión</button>
+                <button type="submit" class="logout">Cerrar Sesión</button>
             </form>
         </body>
     </main>    

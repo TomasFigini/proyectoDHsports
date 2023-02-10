@@ -27,7 +27,20 @@ body{
     border: #1C1C1F solid;
     border-radius: 10px;
 }
- .user-fullname {
+.user-fullname {
     padding: 5px;
- }
+}
 
+.logout{
+    border-radius: 17px;
+    border: transparent;
+    padding: 15px;
+    background-color: #f44336;
+    opacity: 0.7;
+    transition: 0.3s;
+    margin-bottom: 10px;
+    margin-left: 17%;
+    width: 9pc; 
+}
+
+.logout:hover{opacity: 1;}

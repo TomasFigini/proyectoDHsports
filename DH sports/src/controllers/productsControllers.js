@@ -18,7 +18,6 @@ const productController = {
             })
             .then((p) => {
                 let products = p.filter((p => p.deleted == 0))
-                console.log(products)
                 res.render("products/products", { products })
             })
 

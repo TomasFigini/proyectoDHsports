@@ -70,9 +70,9 @@ const usersControllers = {
                             role:"",
                             deleted: 0
                         })
-                    res.render("./users/profile");
+                    res.render("./users/login");
                     }else {
-                        res.render("register", {
+                        res.render("./users/register", {
                             msg: "Ya existe un usuario registrado con esos datos",
                             oldData: req.body
                         })

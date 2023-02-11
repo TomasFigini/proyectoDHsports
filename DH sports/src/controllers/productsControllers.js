@@ -158,6 +158,17 @@ const productController = {
 
     },
 
+    delete: function (req, res) {
+        db.Product.findByPk(req.params.id,{
+            include: [{ association: "talle" },
+            {association: "categoria"}]
+        })
+            .then((product) => {
+        
+                res.render("products/delete", { product })
+            })
+    },
+
     destroy: (req, res) => {
         db.Product.update({
             deleted: 1

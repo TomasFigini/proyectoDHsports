@@ -17,8 +17,8 @@ router.post('/', uploadFile.single('archivo'), productsControllers.store);
 router.get('/:id/edit',authMiddleware, productsControllers.edit);
 router.post('/:id/edit', uploadFile.single('archivo'), productsControllers.update);
 
-// router.get('/delete/:id', productsControllers.delete);
-router.delete('/:id', productsControllers.destroy);
+router.get('/:id/delete', productsControllers.delete);
+router.post('/:id/delete', productsControllers.destroy);
 
 module.exports = router
 

@@ -64,7 +64,7 @@
 //             arrayErrores.push('Debe ingresar una Fecha de Nacimiento');
 //             e.preventDefault();
 //         }
-//         if(password.value == '' || password.value.length < 8){
+//         if(password.value == '' || password.value.length < 8){       
 //             arrayErrores.push('La contraseña debe tener al menos 8 caracteres');
 //             e.preventDefault();
 //         }

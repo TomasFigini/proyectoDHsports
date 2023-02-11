@@ -5,7 +5,7 @@ const ejs = require('ejs');
 const session = require('express-session');
 const methodOverride = require('method-override');
 const cookies = require('cookie-parser');
-const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
+const userLogged = require('./src/middlewares/userLoggedMiddleware');
 
 //Rutas
 const productsRouter = require('./src/routes/productsRouter');
@@ -26,7 +26,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }))
-app.use(userLoggedMiddleware);
+app.use(userLogged);
 
 app.listen(3000, ()=>{
     console.log('Server corriendo en el puerto 3000');

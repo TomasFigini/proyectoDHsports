@@ -12,7 +12,9 @@ const validations = [
     // Validación del campo "fecha_nacimiento"
     check('fecha').isISO8601().withMessage('El campo fecha de nacimiento debe tener un formato válido (YYYY-MM-DD)'),
     // Validación del campo "contraseña"
-    check('password').notEmpty().withMessage('El campo contraseña es obligatorio'),
+    check('password')
+    .notEmpty().withMessage('El campo contraseña es obligatorio')
+    .isLength({min: 8}).withMessage('El campo tiene que ser mayor a 8 caracteres'),
     // Validación del campo "repetir_contraseña"
     check('repitpassword').custom((value, { req }) => {
       if (value !== req.body.password) {

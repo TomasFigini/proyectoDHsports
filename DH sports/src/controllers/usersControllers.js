@@ -59,6 +59,7 @@ const usersControllers = {
             db.User.findAll()
                 .then(user => {
                     let chequeado = user.find(u => (u.email == req.body.email));
+                    console.log(chequeado)
                     if (!chequeado) {
                         db.User.create({
                             nombre: req.body.nombre,
@@ -72,8 +73,12 @@ const usersControllers = {
                         })
                     res.render("./users/login");
                     }else {
-                        res.render("./users/register", {
-                            msg: "Ya existe un usuario registrado con esos datos",
+                        return res.render("./users/register", {
+                            errors: {
+                                email: {
+                                    msg: "Ya existe un usuario registrado con esos datos"                                   
+                                }
+                            },
                             oldData: req.body
                         })
                     }

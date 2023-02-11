@@ -12,7 +12,7 @@ window.addEventListener("load", function(){
     campoNombre.addEventListener("keypress", function(e){
         let errorName = document.querySelector("div.errorName");
         errorName.innerHTML = "<p>"+ "" + "</p>"
-    })
+    }) 
 
     campoApellido.addEventListener("keypress", function(e){
         let errorApellido = document.querySelector("div.errorApellido");
@@ -99,6 +99,12 @@ window.addEventListener("load", function(){
             e.preventDefault();
             let errorEmail = document.querySelector("div.errorEmail");
             errorEmail.innerHTML = "<p>"+ "Formato de email inválido" + "</p>"
+        }
+
+        //Validacion password
+        if(password.value.length < 8){
+            let errorPassword = documents.querySelector('div.errorPassword');
+            errorPassword.innerHTML = '<p>' + 'La contraseña debe tener 8 caracteres' + '<p>'
         }
 
         //Validacion Imagen de perfil

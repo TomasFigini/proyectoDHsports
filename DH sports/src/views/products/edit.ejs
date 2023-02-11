@@ -14,7 +14,7 @@
     <main>
         <form action="/products/<%= producto.id %>/edit" method="post" enctype="multipart/form-data">
 
-            <a href="/products/<%= producto.id%>/delete">Eliminar Producto</a>
+            <a href="/products/<%= producto.id%>/delete"><div class='boton-reset2'>Eliminar<i class="fa-solid fa-trash"></i></div></a>
             <div>
                 <div class="sub-label"><label>Nombre del producto:</label></div>
                     <input type="text" name="name" class="input" value="<%= producto.nombre %>">

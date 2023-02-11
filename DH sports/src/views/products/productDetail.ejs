@@ -23,13 +23,12 @@
             </ul>
         </div>    
         <section class="articulo">
-            <% if(userLogged == undefined){ %>
                 <% if(userLogged.role == 'Admin'){%>
                     <a href="/products/<%= product.id %>/edit"><button type="submit">Editar producto</button></a>
                 <% } %>
                 <div class="container">
                     <ul class="slider">
-                        <li id="slide1"><img width='250px' src="/images/products/<%= product.imagen %>" alt="Camiseta seleccion Argentina"></li>
+                        <li id="slide1"><img width='250px' src="/images/products/<%= product.imagen %>"></li>
                     </ul>
                 </div>
             <section class="product-data">
@@ -96,7 +95,6 @@
                                 </details>
                         </section>
         </section>
-        <% } %>
         </main>    
             <footer class="footer">
                 <%- include('../partials/footer') %> 

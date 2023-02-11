@@ -12,9 +12,15 @@
         <%- include('../partials/header') %>
     </header>
     <main>
+        <h1>¿Deseas eliminar el producto?</h1>
         <form action="/products/<%= product.id %>/delete" method="post">
-            <button type="submit">Eliminar producto</button>
-            <a href="/products/<%= product.id %>/edit">Volver<a>
+            
+            <div><img width='250px' src="/images/products/<%= product.imagen %>"></div>
+
+            <div class="botones-padre">
+                <button type="submit" class='boton-reset2'>Eliminar <i class="fa-solid fa-trash"></i></button>
+                <a href="/products/<%= product.id %>/edit"><div class="volver">Volver <i class="fa-solid fa-rotate-left"></i></div></a>
+            </div>
         </form>
     </main>
     <footer class="footer">

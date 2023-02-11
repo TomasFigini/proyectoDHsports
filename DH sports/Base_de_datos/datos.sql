@@ -62,6 +62,11 @@ INSERT INTO `dhsports_db`.`colors` (`id`, `color`) VALUES (6, 'Otro');
 
 INSERT INTO `dhsports_db`.`users` (`id`,`nombre`,`apellido`,`email`,`contraseña`,`avatar`,`role`,`deleted`) VALUES (1,'Tomas','Figini','tomasfigini79@gmail.com','$2a$10$MXo6xTPFjFxNVj9lSNHBbOTJ1bUvwbBQyzEE2lrBw0URRBccKov8W','systemusers_94754.png','Admin',0);
 INSERT INTO `dhsports_db`.`users` (`id`,`nombre`,`apellido`,`email`,`contraseña`,`avatar`,`role`,`deleted`) VALUES (2,'Nicolas','Castiglioni','nicolascastiglioni@gmail.com','$2a$10$MXo6xTPFjFxNVj9lSNHBbOTJ1bUvwbBQyzEE2lrBw0URRBccKov8R','systemusers_94754.png','Admin',0);
+INSERT INTO `dhsports_db`.`users` (`id`,`nombre`,`apellido`,`email`,`contraseña`,`avatar`,`role`,`deleted`) VALUES (3,'asdasd','asdasd','asd@gmail.com','$2a$10$qP5ud746LPtngMNZvSDK9egViIIt6yB/Y4RRkxbz2VYEM87VTD9lu','1675807605992_img.jpg','',0);
+INSERT INTO `dhsports_db`.`users` (`id`,`nombre`,`apellido`,`email`,`contraseña`,`avatar`,`role`,`deleted`) VALUES (4,'qweqwe','qweqwe','qwe@gmail.com','$2a$10$aFIuUEhZMr2xA68gkQiUy.icybroeu68pJY5jjYIag.mT.jJ3tmFC','1675807812271_img.jpg','',0);
+INSERT INTO `dhsports_db`.`users` (`id`,`nombre`,`apellido`,`email`,`contraseña`,`avatar`,`role`,`deleted`) VALUES (5,'Tomas','Figini','tomasfigini@live.com.ar','$2a$10$ZlSsI44ZXD740h91AlPDyuXxEMJWoGB6emWXXFR5lrGzof3he/5HK','1676064361810.jpg','Admin',0);
+INSERT INTO `dhsports_db`.`users` (`id`,`nombre`,`apellido`,`email`,`contraseña`,`avatar`,`role`,`deleted`) VALUES (6,'Tuki','Tuki','tuki@gmail.com','$2a$10$8aaQw9slddf4A9HyJd8hfOoVY9BHUnesILABVYwtzGvzBNoodJFbO','1676140781488.jpg','',0);
+INSERT INTO `dhsports_db`.`users` (`id`,`nombre`,`apellido`,`email`,`contraseña`,`avatar`,`role`,`deleted`) VALUES (7,'asdasd','asdasd','asdasd@gmail.com','$2a$10$OVRmleg.sx20yX.SFDWPz.B4u2iU6tQfORaQ.LteheflceRF9bvUa','1676143227166.jpg','',0);
 
 
 /* PRODUCTS */

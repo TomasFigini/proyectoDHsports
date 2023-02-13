@@ -41,7 +41,12 @@
     </div>
     
     <main>
-        <h2 class="titulo">Todos los productos</h2>
+        <div class="titulo-boton">
+            <h2 class="titulo">Todos los productos</h2>
+            <% if(userLogged !== undefined && userLogged.role === 'Admin'){ %>
+                <a href="/products/create" class="boton-addProduct"><button type="submit">Agregar producto</button></a>
+            <% } %>
+        </div>
         <div>
             <% products[0].id %> 
         </div>

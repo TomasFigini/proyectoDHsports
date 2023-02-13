@@ -14,7 +14,7 @@ const validations = [
     // Validación del campo "contraseña"
     check('password')
     .notEmpty().withMessage('El campo contraseña es obligatorio')
-    .isLength({min: 8}).withMessage('El campo tiene que ser mayor a 8 caracteres'),
+    .isLength({min: 8}).withMessage('El campo tiene que tener al menos 8 caracteres'),
     // Validación del campo "repetir_contraseña"
     check('repitpassword').custom((value, { req }) => {
       if (value !== req.body.password) {

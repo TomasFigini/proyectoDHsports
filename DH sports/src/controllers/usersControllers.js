@@ -5,6 +5,7 @@ const session = require("express-session");
 
 const { Sequelize } = require('../database/models');
 const db = require('../database/models');
+const userLogged = require('../middlewares/userLoggedMiddleware');
 const Op = Sequelize.Op;
 
 const usersControllers = {
@@ -20,7 +21,7 @@ const usersControllers = {
                 .then(user => {
                     let busquedaEmail = user.find(u => u.email == req.body.email)
                     if (busquedaEmail) {
-                        let comparacionPassword = bcrypt.compareSync(req.body.password, busquedaEmail.contraseña)
+                        let comparacionPassword = bcrypt.compareSync(req.body.password, busquedaEmail.contraseña)                        
                         if (comparacionPassword) {
                             delete busquedaEmail.contraseña
                             req.session.userLogged = busquedaEmail

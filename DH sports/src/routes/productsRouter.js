@@ -5,11 +5,13 @@ const productsControllers = require('../controllers/productsControllers');
 //Middlewares
 const uploadFile = require("../middlewares/productImageMiddleware");
 const authMiddleware = require('../middlewares/authMiddleware');
+const userLogged = require('../middlewares/userLoggedMiddleware')
 
-router.get("/search", productsControllers.search); 
+router.get("/search",userLogged ,productsControllers.search);
+ 
 
 router.get('/', productsControllers.index);
-router.get('/detail/:id', productsControllers.detail);
+router.get('/detail/:id',userLogged , productsControllers.detail);
 
 router.get('/create', productsControllers.create);
 router.post('/', uploadFile.single('archivo'), productsControllers.store);

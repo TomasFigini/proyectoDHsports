@@ -14,11 +14,10 @@
     <main>
         <form action="/products/<%= producto.id %>/edit" method="post" enctype="multipart/form-data">
 
-            <a href="/products/<%= producto.id%>/delete"><div class='boton-reset2'>Eliminar<i class="fa-solid fa-trash"></i></div></a>
             <div>
                 <div class="sub-label"><label>Nombre del producto:</label></div>
-                    <input type="text" name="name" class="input" value="<%= producto.nombre %>">
-                    <% if(locals.errors && errors.nombre){ %>
+                <input type="text" name="name" class="input" value="<%= producto.nombre %>">
+                <% if(locals.errors && errors.nombre){ %>
                         <div class="error">
                             <%= errors.nombre.msg %> 
                         </div>
@@ -77,7 +76,7 @@
                         <option value="<%= sport[i].id %> "><%= sport[i].sport %> </option>
                         
                         <%  } %>
-                    <% }  %>    
+                        <% }  %>    
                 </select>    
             </div>
 
@@ -105,37 +104,38 @@
                         <% } else { %>
                             <option value="<%= size[i].id %> "><%= size[i].talle %> </option>
                             
-                        <%  } %>
-                        <% }  %> 
-                </select>    
-            </div>
-
-            <div class="categoria">
-                <label for="color" class="">Color:</label>
-                <select name="color" id="color">
-                    <% for(let i=0; i < color.length; i++){%>
-                        <% if(color[i].id == producto.colorId){ %> 
-                    <option value="<%= color[i].id %>" selected><%= color[i].color %></option>
-                        <% } else { %>
-                        <option value="<%= color[i].id %> "><%= color[i].color %> </option>
-                        
-                        <%  } %>
-                    <% }  %>    
-                </select>    
-            </div>
-    
-            <div class="categoria">
-                <input type="file" name="archivo" value="<%= producto.imagen %>">
-                <div class="errorImage validacionesFront"></div>
-                <% if(locals.errors && errors.imagenProducto){ %>
-                    <div class="error">
-                        <%= errors.imagenProducto.msg %> 
+                            <%  } %>
+                            <% }  %> 
+                        </select>    
                     </div>
-                <% } %>
-            </div>
-
-            <div><input type="submit" value="Confirmar" class="boton"></div>
-            <div><button type="reset" class="boton-reset">Cancelar cambios</button></div>
+                    
+                    <div class="categoria">
+                        <label for="color" class="">Color:</label>
+                        <select name="color" id="color">
+                            <% for(let i=0; i < color.length; i++){%>
+                                <% if(color[i].id == producto.colorId){ %> 
+                                    <option value="<%= color[i].id %>" selected><%= color[i].color %></option>
+                                    <% } else { %>
+                                        <option value="<%= color[i].id %> "><%= color[i].color %> </option>
+                                        
+                                        <%  } %>
+                                        <% }  %>    
+                                    </select>    
+                                </div>
+                                
+                                <div class="categoria">
+                                    <input type="file" name="archivo" value="<%= producto.imagen %>">
+                                    <div class="errorImage validacionesFront"></div>
+                                    <% if(locals.errors && errors.imagenProducto){ %>
+                                        <div class="error">
+                                            <%= errors.imagenProducto.msg %> 
+                                        </div>
+                                        <% } %>
+                                    </div>
+                                    
+                                    <div><input type="submit" value="Confirmar" class="boton"></div>
+                                    <div><button type="reset" class="boton-reset">Cancelar</button></div>
+                                    <a href="/products/<%= producto.id%>/delete"><div class='boton-reset2'>Eliminar<i class="fa-solid fa-trash"></i></div></a>
         </form>
     </main>
 

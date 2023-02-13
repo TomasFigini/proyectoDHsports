@@ -15,22 +15,22 @@
 
     </header>
     <main>    
-        <div class="ruta-producto">
+        <!-- <div class="ruta-producto">
             <ul>
                 <li><a href="/"><i>Inicio ></i></a></li>
                 <li><a href="#"><i>Hombre ></i></a></li>
                 <li><a href="#"><i>Indumentaria</i></a></li>
             </ul>
-        </div>    
+        </div>     -->
         <section class="articulo">
-                <% if(userLogged.role == 'Admin'){%>
-                    <a href="/products/<%= product.id %>/edit"><button type="submit">Editar producto</button></a>
-                <% } %>
-                <div class="container">
-                    <ul class="slider">
-                        <li id="slide1"><img width='250px' src="/images/products/<%= product.imagen %>"></li>
-                    </ul>
-                </div>
+            <% if(userLogged !== undefined && userLogged.role === 'Admin'){ %>
+                <a href="/products/<%= product.id %>/edit" class="boton-editarProduto"><button type="submit">Editar producto</button></a>
+            <% } %>
+            <div class="container">
+                <ul class="slider">
+                    <li id="slide1"><img width='250px' src="/images/products/<%= product.imagen %>"></li>
+                </ul>
+            </div>
             <section class="product-data">
                 <div class="product-title">
                     <h1 class="title"><b><%= product.nombre %> </b></h1>
@@ -45,59 +45,59 @@
                 </div>
                 <details class="tabla-talles">
                     <summary>Tabla de talles</summary>
-                        <form action="#" method="post">
-                            <label for="talle">XS<input type="radio" name="talle" value="XS"></label>
-                            <label for="talle">S<input type="radio" name="talle" value="S"></label>
-                            <label for="talle">M<input type="radio" name="talle" value="M"></label>
-                            <label for="talle">L<input type="radio" name="talle" value="L"></label>
-                            <label for="talle">XL<input type="radio" name="talle" value="XL"></label>
-                        </form>
-                        </details>
-                            <div class="boton-añadir">
-                                <button type="submit" class="añadir-button">
-                                    <b>AGREGAR AL CARRITO</b>
-                                    <i class="fa-solid fa-cart-shopping fa-2xl"></i>
-                                </button>
-                            </div>
-                        </section>
-                        <section class="description-container">
-                                <details class="descripcion">
-                                    <summary><b>Descripcion</b></summary>
-                                    <p><%= product.descripcion %></p>
-                                </details>
-                                <details class="especificaciones">
-                                    <summary><b>Especificaciones</b></summary>
-                                    <div>
-                                        <h3>Instrucciones de Lavado</h3>
-                                        <ul>
-                                            <li>No usar blanqueador.</li>
-                                            <li>No utilizar secadora.</li>
-                                            <li>No lavar en seco.</li>
-                                            <li>Lavar a maquina en temperatura fria.</li>
-                                            <li>Planchar a temperatura baja.</li>
-                                        </ul>
-                                    </div>
-                                </details>
-                                <details class="detalles">
-                                    <summary><b>Detalles</b></summary>
-                                    <ul>
-                                        <li>Corte ajustado</li>
-                                        <li>Cuello redondo</li>
-                                        <li>tejido de punto doble 100% poliester reciclado</li>
-                                        <li>Tecnologia de absorcion <b>AEROREADY</b></li>
-                                        <li>Paneles de malla en los costados</li>
-                                        <li>Puños acanalados</li>
-                                        <li>Dobladillo trasero alargado</li>
-                                        <li>Escudo bordado de la Seleccion Argentina</li>
-                                        <li>Color del articulo: White / Ligth Blue</li>
-                                        <li>Numero de articulo: HB9217</li>
-                                    </ul>
-                                </details>
-                        </section>
+                    <form action="#" method="post">
+                        <label for="talle">XS<input type="radio" name="talle" value="XS"></label>
+                        <label for="talle">S<input type="radio" name="talle" value="S"></label>
+                        <label for="talle">M<input type="radio" name="talle" value="M"></label>
+                        <label for="talle">L<input type="radio" name="talle" value="L"></label>
+                        <label for="talle">XL<input type="radio" name="talle" value="XL"></label>
+                    </form>
+                </details>
+                <div class="boton-añadir">
+                    <button type="submit" class="añadir-button">
+                        <b>AGREGAR AL CARRITO</b>
+                        <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+                    </button>
+                </div>
+            </section>
+            <section class="description-container">
+                 <details class="descripcion">
+                    <summary><b>Descripcion</b></summary>
+                    <p><%= product.descripcion %></p>
+                </details>
+                <details class="especificaciones">
+                    <summary><b>Especificaciones</b></summary>
+                    <div>
+                        <h3>Instrucciones de Lavado</h3>
+                        <ul>
+                            <li>No usar blanqueador.</li>
+                            <li>No utilizar secadora.</li>
+                            <li>No lavar en seco.</li>
+                            <li>Lavar a maquina en temperatura fria.</li>
+                            <li>Planchar a temperatura baja.</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="detalles">
+                    <summary><b>Detalles</b></summary>
+                    <ul>
+                        <li>Corte ajustado</li>
+                        <li>Cuello redondo</li>
+                        <li>tejido de punto doble 100% poliester reciclado</li>
+                        <li>Tecnologia de absorcion <b>AEROREADY</b></li>
+                        <li>Paneles de malla en los costados</li>
+                        <li>Puños acanalados</li>
+                        <li>Dobladillo trasero alargado</li>
+                        <li>Escudo bordado de la Seleccion Argentina</li>
+                        <li>Color del articulo: White / Ligth Blue</li>
+                        <li>Numero de articulo: HB9217</li>
+                    </ul>
+                </details>
+            </section>
         </section>
-        </main>    
-            <footer class="footer">
-                <%- include('../partials/footer') %> 
-            </footer>
+    </main>    
+    <footer class="footer">
+        <%- include('../partials/footer') %> 
+    </footer>
 </body>
 </html>

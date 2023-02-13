@@ -10,6 +10,7 @@
 }
 
 .boton{
+    font-size: 17px;
     border-radius: 17px;
     border: transparent;
     background-color: #4CAF50;
@@ -20,9 +21,11 @@
     opacity: 0.7;
     transition: 0.3s;
     width: 9pc;
+    color: white;
 }
-
+ 
 .boton-reset{
+    font-size: 17px;
     border-radius: 17px;
     border: transparent;
     padding: 15px;
@@ -32,9 +35,11 @@
     margin-bottom: 10px;
     margin-left: 17%;
     width: 9pc; 
+    color: white;
 }
 
 .boton-reset2{
+    font-size: 17px;
     border-radius: 17px;
     border: transparent;
     padding: 15px;
@@ -42,9 +47,12 @@
     opacity: 0.7;
     transition: 0.3s;
     margin-bottom: 10px;
-    width: 8pc;
-    margin-top: 10px; 
+    margin-left: 17%;
+    width: 9pc;  
+    display: flex;
+    justify-content: space-around;
 }
+
 
 .boton:hover,.boton-reset:hover,.boton-reset2:hover,.volver:hover {opacity: 1}
 

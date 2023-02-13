@@ -2,13 +2,16 @@ const fs = require('fs');
 const path = require('path');
 const { Sequelize } = require('../database/models');
 const { validationResult, cookie } = require("express-validator");
+const session = require("express-session");
+const userLogged = require('../middlewares/userLoggedMiddleware');
 
 const db = require("../database/models");
 const Op = Sequelize.Op;
 
 const productController = {
-
+    
     index: function (req, res) {
+        let userLogged = req.session.userLogged
         db.Product.findAll({
             include: [{ association: "categoria" }],
             where: {
@@ -18,7 +21,7 @@ const productController = {
             })
             .then((p) => {
                 let products = p.filter((p => p.deleted == 0))
-                res.render("products/products", { products })
+                res.render("products/products", { products, userLogged })
             })
 
     },
@@ -38,19 +41,20 @@ const productController = {
     },
 
     detail: function (req, res) {
+        let userLogged = req.session.userLogged
         db.Product.findByPk(req.params.id,{
             include: [{ association: "talle" },
             {association: "categoria"}]
         })
             .then((product) => {
         
-                res.render("products/productDetail", { product })
+                res.render("products/productDetail", { product, userLogged })
             })
     },
 
-    cart: function (req, res) { res.render("products/productCart") },
+    cart: function(req, res) { res.render("products/productCart") },
 
-    create: function (req, res) {
+    create: function(req, res) {
 
         let size = db.Size.findAll();
         let sport = db.Sport.findAll();

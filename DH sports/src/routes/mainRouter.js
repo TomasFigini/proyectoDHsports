@@ -14,4 +14,9 @@ router.get('/productcart', mainControllers.productcart);
 
 router.get('/productedit', mainControllers.productedit);
 
+//Rutas Api
+router.get('/api', mainControllers.index);
+
+router.get('/api/productdetail', mainControllers.productdetail);
+
 module.exports = router;

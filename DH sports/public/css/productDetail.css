@@ -270,11 +270,27 @@ ul.slider li:target{
     color: white;
 }
 
-.boton-editarProduto {
+.boton-editarProducto {
     display: flex;
     justify-content: flex-end;
     margin-right: 30px;
 }
+
+a.boton-editarProducto button{
+    font-size: 17px;
+    border-radius: 17px;
+    border: transparent;
+    background-color: #4CAF50;
+    margin-bottom: 20px;
+    padding: 15px;
+    margin-left: 80%;
+    margin-top: 15px;
+    opacity: 0.7;
+    transition: 0.3s;
+    color: white;
+}
+
+.editarProducto:hover, .agregarProducto:hover {opacity: 1}
 
 .boton-addProduct button{
     font-size: 17px;
@@ -283,11 +299,15 @@ ul.slider li:target{
     background-color: #4CAF50;
     margin-bottom: 20px;
     padding: 15px;
-    margin-left: 17%;
+    margin-left: 80%;
     margin-top: 15px;
     opacity: 0.7;
     transition: 0.3s;
     color: white;
+}
+
+.contenedor-botonEdit{
+    padding-top: 10px;
 }
 
 .sku{

@@ -38,9 +38,9 @@
     </div>
 
     <main>
-
+        
+        <a href="./products" style="color: black;"><button type="submit" class="ver-todo">Ver todo<i class="fa-solid fa-arrow-right"></i></button></a>
         <h2 class="titulo">Popular</h2>
-        <button type="submit" class="ver-todo"><a href="./products" style="color: black;">Ver todo</a>  <i class="fa-solid fa-arrow-right"></i></button>
         <div class="articulos">
             <% products.forEach(product => {  %> 
             <a href="./products/detail/<%= product.id %>">

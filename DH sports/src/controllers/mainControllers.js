@@ -17,7 +17,6 @@ let mainControllers = {
             })
             .then((p) => {
                 let products = p.filter((p => p.deleted == 0))
-                console.log(products)
                 res.render("index", { products })
             })
 

@@ -3,8 +3,8 @@
 <head>
     <%- include('../partials/head') %> 
         
-    <link rel="stylesheet" href="/css/index.css"> 
     <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="/css/index.css"> 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Detalle de producto</title>
 </head>
@@ -24,7 +24,9 @@
         </div>     -->
         <section class="articulo">
             <% if(userLogged !== undefined && userLogged.role === 'Admin'){ %>
-                <a href="/products/<%= product.id %>/edit" class="boton-editarProduto"><button type="submit">Editar producto</button></a>
+                <div class="contenedor-botonEdit">
+                    <a href="/products/<%= product.id %>/edit" class="boton-editarProducto"><button type="submit" class="editarProducto">Editar producto</button></a>
+                </div>
             <% } %>
             <div class="container">
                 <ul class="slider">
@@ -54,10 +56,12 @@
                     </form>
                 </details>
                 <div class="boton-añadir">
-                    <button type="submit" class="añadir-button">
-                        <b>AGREGAR AL CARRITO</b>
-                        <i class="fa-solid fa-cart-shopping fa-2xl"></i>
-                    </button>
+                    <form action="/productcart" method="POST">
+                        <button type="submit" class="añadir-button">
+                            <b>AGREGAR AL CARRITO</b>
+                            <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+                        </button>
+                    </form>
                 </div>
             </section>
             <section class="description-container">

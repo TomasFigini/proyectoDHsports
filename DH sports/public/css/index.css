@@ -157,7 +157,12 @@ body{
 
 .ver-todo{
     margin-bottom: 20px;
-    margin-left: 3px;    
+    margin-left: 3px;
+    color: #262626;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    height: 25px;
+    padding: 5px;
 }
 
 .articulos{
@@ -346,7 +351,6 @@ details.aboutus {
     .nav-bar{
         justify-content: space-between;
         padding: 13px;
-        margin-right: 15px;
     }
 
     .logo{

@@ -104,10 +104,7 @@ const productController = {
                         errors: errors.mapped()
                     })
                 })
-
-
         }
-
     },
 
     edit: function (req, res) {
@@ -126,12 +123,16 @@ const productController = {
 
     update: function(req, res) {
         let errors = validationResult(req);
+        let producto = db.Product.findByPk(req.params.id)
+        .then(() => {
         if (errors.isEmpty()) {
-
+            console.log(producto)
+            
+            console.log('-----------------------------------------' + req.file + '---------------------------------------')
             db.Product.update({
                 nombre: req.body.name,
                 descripcion: req.body.description,
-                imagen: req.file.filename,
+                imagen: req.file ? req.file.filename : producto.imagen,
                 descuento: req.body.discount,
                 precio: req.body.price,
                 colorId: req.body.color,
@@ -146,20 +147,19 @@ const productController = {
                 }
             })
             res.redirect("/products/detail/" + req.params.id)
-        } else {
-            let producto = db.Product.findByPk(req.params.id)
-            let size = db.Size.findAll();
-            let sport = db.Sport.findAll();
-            let brand = db.Brand.findAll();
-            let category = db.Category.findAll();
-            Promise.all([producto, size, sport, brand, category])
-                .then(([producto, size, sport, brand, category]) => {
-                    res.render("edit" + req.params.id, { producto: producto, size: size, sport: sport, brand: brand, category: category, errors: errors.mapped() })
-                })
+            } else {
+                let producto = db.Product.findByPk(req.params.id)
+                let size = db.Size.findAll();
+                let sport = db.Sport.findAll();
+                let brand = db.Brand.findAll();
+                let category = db.Category.findAll();
+                Promise.all([producto, size, sport, brand, category])
+                    .then(([producto, size, sport, brand, category]) => {
+                        res.render("edit" + req.params.id, { producto: producto, size: size, sport: sport, brand: brand, category: category, errors: errors.mapped() })
+                    })
 
-        }
-
-
+            }
+        })
     },
 
     delete: function (req, res) {

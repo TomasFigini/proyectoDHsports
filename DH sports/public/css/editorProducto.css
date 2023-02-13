@@ -53,6 +53,19 @@
     justify-content: space-around;
 }
 
+.boton-reset2a{
+    font-size: 17px;
+    border-radius: 17px;
+    border: transparent;
+    padding: 15px;
+    background-color: #f44336;
+    opacity: 0.7;
+    transition: 0.3s;
+    margin-bottom: 10px;
+    width: 9pc;  
+    display: flex;
+    justify-content: space-around;
+}
 
 .boton:hover,.boton-reset:hover,.boton-reset2:hover,.volver:hover {opacity: 1}
 

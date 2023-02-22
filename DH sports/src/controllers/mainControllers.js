@@ -19,7 +19,20 @@ let mainControllers = {
                 let products = p.filter((p => p.deleted == 0))
                 res.render("index", { products })
             })
+    },
 
+    api:(req,res)=>{
+        db.Product.findAll({
+            include: [{ association: "categoria" }],
+            where: {
+                deleted: 0
+            },
+            raw: true
+            })
+            .then((p) => {
+                let products = p.filter((p => p.deleted == 0))
+                return res.json(products);
+            })
     },
 
     register:(req,res) => {

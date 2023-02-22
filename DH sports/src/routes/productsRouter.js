@@ -22,15 +22,4 @@ router.post('/:id/edit', uploadFile.single('archivo'), productsControllers.updat
 router.get('/:id/delete', productsControllers.delete);
 router.post('/:id/delete', productsControllers.destroy);
 
-//// Rutas para API de productos
-router.get('/api', productsControllers.index);
-router.get('/api/search', productsControllers.search);
-router.get('/api/create', productsControllers.create);
-router.post('/api/create', productsControllers.store);
-router.get('/api/detail/:id', productsControllers.detail);
-router.get('/api/edit/:id', productsControllers.edit);
-router.put('/api/edit/:id', productsControllers.update);
-router.delete('/api/delete/:id', productsControllers.destroy);
-
 module.exports = router
-
